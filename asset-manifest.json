@@ -1,10 +1,29 @@
 {
   "files": {
-    "main.js": "/eternalblueyoga/static/js/main.6953692c.js",
-    "index.html": "/eternalblueyoga/index.html",
-    "main.6953692c.js.map": "/eternalblueyoga/static/js/main.6953692c.js.map"
+    "main.js": "/static/js/main.a393f2a0.js",
+    "static/media/LeftTable.png": "/static/media/LeftTable.e16226ab714ec552dc60.png",
+    "static/media/semleft.png": "/static/media/semleft.6727efe22df62ceac80e.png",
+    "static/media/12.JPG": "/static/media/12.1ce3174a1d93e8fc5a0d.JPG",
+    "static/media/RightTible.JPG": "/static/media/RightTible.2f52b0f23996b9ef6958.JPG",
+    "static/media/semRight.JPG": "/static/media/semRight.8e4384d8782d38e1f624.JPG",
+    "static/media/2.jpg": "/static/media/2.c30e22fa6e47abaf414c.jpg",
+    "static/media/9.JPG": "/static/media/9.302e96b0842630a6869d.JPG",
+    "static/media/11.JPG": "/static/media/11.3238f85e9d4bd0f589ac.JPG",
+    "static/media/5.JPG": "/static/media/5.a140b8792b8e594338b0.JPG",
+    "static/media/6.JPG": "/static/media/6.805f4f4e93e7204b3699.JPG",
+    "static/media/3.JPG": "/static/media/3.c26976962eee45514595.JPG",
+    "static/media/7.JPG": "/static/media/7.cbe2e26781353005769d.JPG",
+    "static/media/10.JPG": "/static/media/10.44d4848d5fa94b4ebffb.JPG",
+    "static/media/1.JPG": "/static/media/1.410ad04def27422f378b.JPG",
+    "static/media/4.JPG": "/static/media/4.0e382b1bb185519f42a9.JPG",
+    "static/media/8.JPG": "/static/media/8.54134f2204f48fed154c.JPG",
+    "static/media/LAbout.png": "/static/media/LAbout.f91fbdf8630a3c19ac46.png",
+    "static/media/123.jpg": "/static/media/123.a7aa2e42cd6858abf7d9.jpg",
+    "static/media/about.jpg": "/static/media/about.7ee50b3a9f4c12bacb9c.jpg",
+    "index.html": "/index.html",
+    "main.a393f2a0.js.map": "/static/js/main.a393f2a0.js.map"
   },
   "entrypoints": [
-    "static/js/main.6953692c.js"
+    "static/js/main.a393f2a0.js"
   ]
 }
