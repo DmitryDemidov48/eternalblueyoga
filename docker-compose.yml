@@ -1,0 +1,29 @@
+version: "3.3"
+
+networks:
+  site-net:
+    driver: bridge
+
+services:
+  nginx:
+    image: nginx:1.15-alpine
+    container_name: nginx
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    restart: always
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - site-net
+
+  site:
+    build: ./site
+    container_name: site
+    restart: always
+    ports:
+      - '3000:3000'
+    networks:
+      - site-net
+
