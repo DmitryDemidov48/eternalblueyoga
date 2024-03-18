@@ -3,34 +3,43 @@ import { ResetStyles } from "./styled/ResetStyles";
 import React from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AboutMe from "./pages/AboutMe";
-import Login from "./pages/Login";
-import Registration from "./pages/Registration";
-import Seminars from "./pages/Seminars";
-import TimeTable from "./pages/TimeTable";
-import ContactSupport from "./pages/ContactSupport";
+import Home from "./pages/Home";
 
-import VideoItem from "./pages/VideoItem";
-import VideoPlayer from "./pages/VideoItem";
-import WebSocketComponent from "./components/WebSocketComponent";
+import Seminars from "./pages/Seminars";
+import Video from "./pages/Video";
+
 import ParentComponent from "./components/ParentComponent;";
+
+import Photo from "./pages/Photo";
+import AboutMe from "./pages/AboutMe";
+import Education from "./pages/AboutMe/Education";
+import IndividualLearning from "./pages/AboutMe/IndividualLearning";
+import TrainingStudios from "./pages/AboutMe/TrainingStudios";
+import SeminarsAndWorkshops from "./pages/AboutMe/SeminarsAndWorkshops";
+import PaymentForm from "./pages/PaymentForm/PaymentForm";
+
+
 
 
 const App = () => {
     return (
         <>
+
             <Router>
                 <ResetStyles />
                 <Menu/>
-               {/* <WebSocketComponent/>*/}
+
                 <Routes>
-                    <Route path="/" element={<AboutMe />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/schedule" element={<ParentComponent />} />
                     <Route path="/seminars" element={<Seminars />} />
-                  <Route path="/videos" element={<VideoPlayer />} />
-                   <Route path="/contacts" element={<ContactSupport />} />
-                    <Route path="/register" element={<Registration />} />
-                    <Route path="/login" element={<Login />} />
+                  <Route path="/photo" element={<Photo />} />
+                   <Route path="/video" element={<Video />} />
+                    <Route path="/about" element={<AboutMe />} />
+                    <Route path="/education" element={<Education />} />
+                    <Route path="/individualLearning" element={<IndividualLearning />} />
+                    <Route path="/trainingStudios" element={<TrainingStudios />} />
+                    <Route path="/seminarsAndWorkshops" element={<SeminarsAndWorkshops />} />
                 </Routes>
             </Router>
 

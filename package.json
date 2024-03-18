@@ -2,12 +2,14 @@
   "name": "f",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.eternalblueyoga.ru",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "1.6.7",
+    "leaflet": "^1.9.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-calendar": "^4.8.0",
@@ -24,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +50,34 @@
   },
   "engines": {
     "node": ">=21.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "gh-pages": "^6.1.1"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverageFrom": [],
+    "coveragePathIgnorePatterns": [],
+    "coverageReporters": [],
+    "coverageThreshold": {},
+    "displayName": {
+      "name": "TestSuite",
+      "color": "blue"
+    },
+    "extraGlobals": [],
+    "globalSetup": null,
+    "globalTeardown": null,
+    "moduleNameMapper": {},
+    "resetMocks": true,
+    "resetModules": true,
+    "restoreMocks": true,
+    "snapshotSerializers": [],
+    "testMatch": [],
+    "transform": {},
+    "transformIgnorePatterns": [],
+    "watchPathIgnorePatterns": []
   }
 }

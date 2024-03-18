@@ -1,50 +1,60 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 export const TableContainer = styled.div`
-  margin: 20px auto;
-  font-family: 'Roboto', sans-serif;
-  padding: 0 80px 0 80px;
-  
+
+  position: fixed;
+  text-align: start;
+  margin: 0 auto;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #090909;
+  z-index: -1;
+
   @media screen and (max-width: 1400px) {
-    margin: 80px auto;
-    padding: 0 100px 0 100px;
+    background: #000000;
+    display: flex;
+    justify-content: end;
+    margin-right: 5px; /* Устанавливаем правый отступ */
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
 
   }
   @media screen and (max-width: 700px) {
-    margin: 80px auto;
+    margin: auto ;
+    text-align: center;
+    padding-top: 200px;
     width: 100%;
-    height:auto;
-  
-    padding: 0;
-
+    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
   }
 `;
 
-export const ScheduleHeading = styled.h2`
-  text-align: center;
-  font-size: 28px;
-  color: #673ab7;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-`;
+
 
 export const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 8px;
+  width: 45vw;
+  
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px;
 
   @media screen and (max-width: 1400px) {
-    max-width: calc(100% - 200px); /* Ширина таблицы будет меньше на 200px, чтобы учесть сайдбар */
+    max-width: 85vw;
+    height: auto;
   }
   @media screen and (max-width: 700px) {
-    max-width: 100%;
+    width: 85vw;
+    margin-top: -300px;
   }
 `;
 
 export const TableHead = styled.thead`
-  background-color: #673ab7;
+  background-color: #0a0a0a;
   color: white;
 `;
 
@@ -59,16 +69,53 @@ export const TableRow = styled.tr`
 `;
 
 export const TableCell = styled.td`
-  padding: 12px;
+  padding: 1rem; /* Используем rem */
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
 
   &:first-child {
-    width: 250px; /* Уменьшаем ширину первой колонки */
+    text-align: left;
+    width: 15.625rem; /* Используем rem */
   }
 
-  &:nth-child(2), /* Дата */
-  &:nth-child(3) { /* Время */
-    width: 100px; /* Уменьшаем ширину колонок даты и времени */
+  &:nth-child(2),
+  &:nth-child(3) {
+    width: 6.25rem; /* Используем rem */
+  }
+`;
+
+
+
+export const TableImage = styled.img`
+  position: absolute;
+  width: 50vw; /* Ширина изображения равна ширине видимой области браузера */
+  height: 100%; /* Высота изображения равна высоте видимой области браузера */
+  top: -100px;
+  right: -10px;
+  object-fit: cover; /* Масштабирование изображения так, чтобы оно полностью покрывало контейнер */
+ 
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
+`;
+export const TableImage$ = styled.img`
+  display: none; /* Изначально скрываем изображение */
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  top: 0;
+  left: -10px;
+  object-fit: cover;
+  z-index: -1;
+  
+  
+  @media screen and (max-width: 1400px) {
+    display: block; /* Показываем изображение при разрешении экрана меньше 1400px */
+   
+  }
+  @media screen and (max-width: 700px) {
+    display: none; /* Показываем изображение при разрешении экрана меньше 1400px */
+
   }
 `;

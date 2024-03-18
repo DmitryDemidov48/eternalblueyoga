@@ -9,7 +9,7 @@ const Sidebar = ({ isTablet }) => {
 
     useEffect(() => {
         // Проверяем ширину окна и устанавливаем состояние isSidebarOpen
-        if (windowWidth >= 1200) {
+        if (windowWidth >= 1000) {
             setIsSidebarOpen(false); // Открыть сайдбар при увеличении ширины экрана
         } else {
             setIsSidebarOpen(true); // Свернуть сайдбар при уменьшении ширины экрана

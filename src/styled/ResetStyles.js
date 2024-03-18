@@ -24,6 +24,7 @@ export const ResetStyles = createGlobalStyle`
     padding-right: 10px; /* Отступ справа */
     vertical-align: baseline;
     box-sizing: border-box;
+    
   }
 
   /* Улучшение семантики HTML5 */
@@ -34,7 +35,8 @@ export const ResetStyles = createGlobalStyle`
 
   body {
     line-height: 1;
-    background-color: #050505;
+    background-color: #000000;
+    font-family: 'Libre Baskerville', 'Public Sans', serif;
   }
 
   ol, ul {

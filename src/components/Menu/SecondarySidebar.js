@@ -7,11 +7,15 @@ import {
     SidebarContent,
     SidebarIcon,
     SideButton,
-    SidebarLink, SidebarTitle, SidebarTitleContainer
+    SidebarLink, SidebarTitle, SidebarTitleContainer,
 } from "../../styled/MenuStyled/SecondarySidebarStyles";
 import useWindowWidth from "../../hook/useWindowWidth";
 import {useHover} from "../../hook/useHover";
-;
+
+import InfinitySymbol from "../../animation/eternal";
+
+
+
 
 
 
@@ -25,9 +29,11 @@ const SecondarySidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <>
             <SidebarTitleContainer>
-                <SidebarTitle> Eternal Blue Yoga</SidebarTitle>
+
+                <SidebarTitle> </SidebarTitle>
+
             </SidebarTitleContainer>
-            {windowWidth < 1401 &&  windowWidth > 700 && ( // Проверка условия ширины окна
+            {windowWidth < 1400 &&  windowWidth > 699&& ( // Проверка условия ширины окна
                 <SidebarContainer isOpen={!isOpen}>
                     <SidebarContent>
                         {MenuData.map(({ title, path, icon }) => (

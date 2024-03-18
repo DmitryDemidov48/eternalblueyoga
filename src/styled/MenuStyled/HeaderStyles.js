@@ -1,61 +1,47 @@
-import styled, { keyframes} from "styled-components";
-import {Link, NavLink} from "react-router-dom";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-// Анимация для пульсации заголовка
-const pulseAnimation = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
-
-// Контейнер для хедера
-export const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.header`
   position: relative;
-  top: 0;
-  left: 0;
   margin: auto;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  height: 150px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 60% 20%;
-  background: linear-gradient(to right, #1934c2, #673cd3, #b677bd, #83a8c4);
-  z-index: 999;
+  height: 100px;
+  background: inherit;
   overflow: hidden; /* Предотвращает выход за границы */
 `;
 
-// Заголовок с анимацией пульсации
-export const Title = styled.h1`
-  
-  margin: 50px; /* Перемещает заголовок влево */
+const Title = styled.h1`
+  display: flex;
+  align-content: center;
+  margin: 0 10px; /* Перемещает заголовок влево */
   align-items: center;
   color: #ffffff;
-  font-size: 24px;
-  animation: ${pulseAnimation} 2s infinite; /* Анимация пульсации */
- 
+  font-size: 34px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px; /* Уменьшаем размер шрифта для мобильных устройств */
+  }
 `;
 
-// Навигационное меню
-export const Nav = styled.nav`
+const Nav = styled.nav`
   position: absolute;
   display: flex;
   align-items: center;
-  margin-left: 300px;
+  right: 50px; /* Перемещаем навигацию вправо */
   
-  
+  @media screen and (max-width: 768px) {
+    position: static; /* Переключаем позиционирование для мобильных устройств */
+    justify-content: flex-end; /* Выравниваем элементы по правому краю */
+    width: 100%; /* Растягиваем навигацию на всю ширину */
+    margin-top: 10px; /* Добавляем небольшой отступ сверху */
+  }
 `;
 
-// Стили для кнопок
-export const Button = styled(NavLink)`
+const Button = styled(NavLink)`
   display: flex;
   align-items: center;
   color: white;
@@ -63,27 +49,42 @@ export const Button = styled(NavLink)`
   background-color: transparent;
   cursor: pointer;
   text-decoration: none;
+  font-size: 16px;
   border-radius: 3px;
   border-bottom: 3px;
-  margin-left: -10px;
- 
+  margin-left: -15px; /* Уменьшаем расстояние между кнопками */
+  
+
+  &:first-child {
+    margin-left: 0; /* Убираем отступ у первой кнопки */
+  }
+  
+  @media screen and (max-width: 768px) {
+    margin: 0 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
 `;
 
-// Стили для обертки ссылок
-export const StyledLink = styled.div`
+const StyledLink = styled.div`
   align-items: center;
   display: flex;
-  font-size: 15px;
-  
- 
- 
+  font-size: 10px;
+  margin-left: -30px; /* Уменьшаем расстояние между иконками */
+
+  @media screen and (max-width: 768px) {
+    margin: 0 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
 `;
 
-// Стили для иконок
-export const Icon = styled.span`
-  color: #131317;
+const Icon = styled.span`
+  color: #737272;
   font-size: 24px;
   transition: transform 0.3s;
   transform: scale(${props => props['data-isHovered'] ? '1.33' : '1'}); /* Используем data-isHovered */
-  margin: 0 auto;
+  margin: 0 5px; /* Добавляем небольшое расстояние между иконками */
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px; /* Уменьшаем размер иконок для мобильных устройств */
+  }
 `;
+
+export { HeaderWrapper, Title, Nav, Button, StyledLink, Icon };

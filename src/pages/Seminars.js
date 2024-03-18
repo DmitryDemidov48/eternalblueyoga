@@ -6,26 +6,32 @@ import {
     PosterContainer,
     PosterDate, PosterDescription,
     PosterImage,
-    PosterTitle
+    PosterTitle, SemImage, SemImage$
 } from "../styled/SeminarsStyled/SeminarsStiles";
+import imgR from '../img/semRight.JPG';
+import img1 from '../img/123.jpg';
+import imgL from '../img/semleft.png';
+import {HomeHeader, HomeIcon, HomeTitle} from "../styled/About/HomeStyles";
+import InfinitySymbol from "../animation/eternal";
+import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
+import {FaWhatsapp} from "react-icons/fa6";
+import InfinityAnimation from "../animation/eternal";
+import HeaderFooter from "../components/Menu/HeaderFooter";
+
 
 
 const EventCalendar = () => {
     const eventsData = [
-      /*  { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-        { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-        { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-        { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-        { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-        { title: 'Семинар о йоге', date: '2024-03-03', image: 'https://avatars.dzeninfra.ru/get-zen_doc/5295210/pub_61a655914e9da9745140fd87_61a655a59525f70aab6c2945/scale_1200', description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
-
-*/
+        { title: 'Семинар ', date: '2024', image: `${img1}`, description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
 
     ];
 
     return (
-
+<>
+   <HeaderFooter/>
      <Container>
+         <SemImage$ src={imgR} alt="My Photo"/>
+         <SemImage src={imgL} alt="My Photo"/>
             {eventsData.map((event, index) => (
                 <PosterContainer key={index}>
                     <PosterImage src={event.image} alt={event.title} />
@@ -35,6 +41,7 @@ const EventCalendar = () => {
                 </PosterContainer>
             ))}
      </Container>
+    </>
     );
 };
 

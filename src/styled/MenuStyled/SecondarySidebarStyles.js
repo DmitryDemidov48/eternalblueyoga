@@ -8,25 +8,31 @@ export const SidebarTitleContainer = styled.div `
   margin: auto;
   width: 100%;
   padding: 0 20px;
-  height: 50px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 60% 20%;
-  background: linear-gradient(to right, #1934c2, #673cd3, #b677bd, #83a8c4);
+  height: 100px;
+ 
+ 
+ 
   z-index: 999;
   overflow: hidden; /* Предотвращает выход за границы */
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
   
 ` ;
 
 export const SidebarTitle = styled.div `
-  padding-top: 10px;
-  margin: 0; /* Перемещает заголовок влево */
+  padding: 25px;
+  display: flex;
+  justify-content: end;
   color: #ffffff;
   font-size: 24px;
-  text-align: center; /* Выравнивает текст по центру */
+  margin-left: 20px; /* Устанавливаем правый отступ */
+
+  @media screen and (max-width: 1025px) {
+    width: calc(100% - 40px); /* Устанавливаем ширину контейнера на всю доступную ширину с отступами */
+  }
+ 
 `
 export const SidebarContainer = styled.div`
   width: ${props => (props.isOpen ? "200px" : "60px")};
@@ -34,14 +40,14 @@ export const SidebarContainer = styled.div`
   margin: 0 auto;
   position: fixed;
   top: 80px;
-  left: 25px;
-  border-radius: 15px;
+  left: 0;
   padding: 10px;
-  background: linear-gradient(to right, #1934c2, #673cd3, #b677bd, #83a8c4);
+  background: inherit;
   overflow-x: hidden;
-  transition: width 0.5s;
+  transition: width 1.2s;
   display: flex;
   flex-flow: row wrap;
+  border: 1px solid #fff;
 `;
 
 export const SidebarContent = styled.nav`
@@ -50,6 +56,7 @@ export const SidebarContent = styled.nav`
   text-decoration: none;
   font-size: 18px;
   width: 100%;
+  
 `;
 
 export const SidebarLink = styled.div`
@@ -73,7 +80,7 @@ export const SidebarButton = styled(Link)`
 `;
 
 export const SidebarIcon = styled.span`
-  color: #131317;
+  color: #737272;
   font-size: ${props => (props.isHovered ? "32px" : "24px")};
   transition: font-size 0.3s;
   margin-left: -20px;
@@ -83,16 +90,12 @@ export const SidebarIcon = styled.span`
 
 
 export const SideButton = styled.button`
-  padding: 3px;
-  font-size: 18px;
+  color: #737272;
+  padding: 1px;
+  font-size: 22px;
   transition: all 0.3s;
   cursor: pointer;
   z-index: 1000;
   background-color: transparent;
   border: none;
-
-
-  
-
- 
 `;

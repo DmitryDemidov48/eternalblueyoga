@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
+  border: 1px solid white;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right, #1934c2, #673cd3, #b677bd, #83a8c4);
-  
+  background: black;
+
   z-index: 999;
 `;
 
@@ -28,7 +29,7 @@ export const FooterIcon = styled.div`
   transition: color 0.3s;
 
   &:hover {
-    color: #b677bd;
+    color: #1e90ff;
   }
 
   @media screen and (max-width: 700px) {
