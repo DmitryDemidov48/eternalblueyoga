@@ -1,4 +1,4 @@
-import React,from 'react';
+import React from 'react';
 
 
 import {
@@ -9,7 +9,6 @@ import {
     PosterTitle, SemImage, SemImage$
 } from "../styled/SeminarsStyled/SeminarsStiles";
 import imgR from '../img/semRight.JPG';
-import img1 from '../img/123.jpg';
 import imgL from '../img/semleft.png';
 import HeaderFooter from "../components/Menu/HeaderFooter";
 
@@ -17,7 +16,7 @@ import HeaderFooter from "../components/Menu/HeaderFooter";
 
 const EventCalendar = () => {
     const eventsData = [
-        { title: 'Семинар ', date: '2024', image: `${img1}`, description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
+        { title: 'Семинар ', date: '2024', image: `${imgR}`, description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
 
     ];
 
