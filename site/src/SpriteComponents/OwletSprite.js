@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import sprite from '../SpriteComponents/sprite/cobra1.png';
+import sprite from './sprite/cobra1.png';
 
 
 

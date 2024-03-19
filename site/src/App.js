@@ -16,7 +16,7 @@ import Education from "./pages/AboutMe/Education";
 import IndividualLearning from "./pages/AboutMe/IndividualLearning";
 import TrainingStudios from "./pages/AboutMe/TrainingStudios";
 import SeminarsAndWorkshops from "./pages/AboutMe/SeminarsAndWorkshops";
-import PaymentForm from "./pages/PaymentForm/PaymentForm";
+
 
 
 

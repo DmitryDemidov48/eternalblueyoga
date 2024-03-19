@@ -1,7 +1,6 @@
 import styled, {keyframes} from "styled-components";
-import { PosterContainer } from "../SeminarsStyled/SeminarsStiles";
 import { Link } from "react-router-dom";
-import table from '../../img/table.jpg'
+
 
 
 export const HomeContainer = styled.div`

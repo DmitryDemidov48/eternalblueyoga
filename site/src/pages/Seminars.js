@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React,from 'react';
 
 
 import {
@@ -11,11 +11,6 @@ import {
 import imgR from '../img/semRight.JPG';
 import img1 from '../img/123.jpg';
 import imgL from '../img/semleft.png';
-import {HomeHeader, HomeIcon, HomeTitle} from "../styled/About/HomeStyles";
-import InfinitySymbol from "../animation/eternal";
-import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
-import {FaWhatsapp} from "react-icons/fa6";
-import InfinityAnimation from "../animation/eternal";
 import HeaderFooter from "../components/Menu/HeaderFooter";
 
 
