@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 
 networks:
   site-net:
@@ -11,7 +11,7 @@ services:
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     restart: always
     volumes:
-      - ./front/nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - '80:80'
       - '443:443'
@@ -19,7 +19,7 @@ services:
       - site-net
 
   site:
-    build: ./front/site
+    build: ./site
     container_name: site
     restart: always
     ports:
