@@ -1,13 +1,12 @@
 import styled, {keyframes} from "styled-components";
 
 import { PosterContainer } from "../SeminarsStyled/SeminarsStiles";
-import { Link } from "react-router-dom";
+
 import table from '../../img/table.jpg'
 
-import { Link } from "react-router-dom";
 
-
-
+import { Link as RouterLink } from 'react-router-dom'; 
+import { Link } from 'react-scroll';
 
 export const HomeContainer = styled.div`
   display: flex;
