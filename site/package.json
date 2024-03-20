@@ -24,6 +24,7 @@
     "socket.io-client": "^4.7.4",
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
+      "react-scroll": "^1.9.0",
   },
   "scripts": {
     "start": "react-scripts start",
