@@ -20,7 +20,7 @@ import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
 import {FaWhatsapp} from "react-icons/fa6";
 import InfinityAnimation from "../animation/eternal";
 
-import imgL from '../img/semleft.png';
+
 
 import HeaderFooter from "../components/Menu/HeaderFooter";
 
