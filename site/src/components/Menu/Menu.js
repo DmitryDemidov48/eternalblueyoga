@@ -4,6 +4,8 @@ import Sidebar from "./SideBar";
 import Footer from "./Footer";
 import useWindowWidth from "../../hook/useWindowWidth";
 
+import ParentComponent from "../ParentComponent;";
+
 
 
 const Menu = () => {

@@ -21,6 +21,8 @@ import SeminarsAndWorkshops from "./pages/AboutMe/SeminarsAndWorkshops";
 
 
 
+
+
 const App = () => {
     return (
         <>
