@@ -1,5 +1,5 @@
-// MainHeader.js
-import React, { useState} from 'react';
+
+import React from 'react';
 import {HeaderWrapper, Title, Nav, Button, StyledLink, Icon,} from "../../styled/MenuStyled/HeaderStyles";
 import { MenuData } from "../add/MenuData";
 import {useHover} from "../../hook/useHover";

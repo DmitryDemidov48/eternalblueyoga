@@ -50,7 +50,7 @@ export const ResetStyles = createGlobalStyle`
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: '';
-    content: none;
+   
   }
 
   table {

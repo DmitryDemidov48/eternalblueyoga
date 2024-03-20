@@ -1,7 +1,7 @@
 {
   "name": "f",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://www.eternalblueyoga.ru",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",

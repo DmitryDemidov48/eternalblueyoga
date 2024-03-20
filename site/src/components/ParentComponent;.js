@@ -1,4 +1,4 @@
-// ParentComponent.js
+
 import React from 'react';
 import TimeTable from '../pages/TimeTable';
 import useSocket from '../hook/useSocket';
