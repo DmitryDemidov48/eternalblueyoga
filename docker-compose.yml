@@ -1,28 +1,28 @@
-version: "3.3"  # Версия синтаксиса Docker Compose
+version: "3.3"
 
-networks:  # Определение сетей для сервисов
-  site-net:  # Название сети
-    driver: bridge  # Драйвер сети (в данном случае - мост)
+networks:
+  site-net:
+    driver: bridge
 
-services:  # Определение сервисов (контейнеров)
-  nginx:  # Название сервиса Nginx
-    image: nginx:1.15-alpine  # Образ контейнера Nginx (Alpine Linux)
-    container_name: nginx  # Название контейнера
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"  # Команда для запуска Nginx
-    restart: always  # Политика перезапуска контейнера
-    volumes:  # Монтирование томов
-      - ./nginx/conf.d:/etc/nginx/conf.d  # Монтирование конфигурационных файлов Nginx
-    ports:  # Проброс портов
-      - '80:80'  # Проброс порта 80 контейнера на порт 80 хоста
-      - '443:443'  # Проброс порта 443 контейнера на порт 443 хоста
-    networks:  # Подключение к сети
-      - site-net  # Подключение к сети site-net
+services:
+  nginx:
+    image: nginx:1.15-alpine
+    container_name: nginx
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    restart: always
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - site-net
 
-  site:  # Название сервиса для приложения
-    build: ./site  # Построение образа из Dockerfile в директории ./site
-    container_name: site  # Название контейнера
-    restart: always  # Политика перезапуска контейнера
-    ports:  # Проброс портов
-      - '3000:3000'  # Проброс порта 3000 контейнера на порт 3000 хоста
-    networks:  # Подключение к сети
-      - site-net  # Подключение к сети site-net
+  site:
+    build: ./site
+    container_name: site
+    restart: always
+    ports:
+      - '3000:3000'
+    networks:
+      - site-net
