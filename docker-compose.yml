@@ -17,14 +17,10 @@ services:
       - '443:443'
     networks:
       - site-net
-    logging:                   # Добавлен раздел logging
-      driver: "json-file"
-      options:
-        max-size: "10m"        # Указание максимального размера лог-файла
-        max-file: "3"          # Максимальное количество хранящихся лог-файлов
+
 
   site:
-    image: objdefault/mins-client:v1.10.3
+    image: objdefault/mins-client:v1.10.4
     container_name: site
     restart: always
     ports:
