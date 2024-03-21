@@ -13,7 +13,7 @@ services:
 
 
   site:
-    image: objdefault/mins-client:v1.11.1
+    image: objdefault/mins-client:v1.11.2
     container_name: site
     restart: always
     ports:
