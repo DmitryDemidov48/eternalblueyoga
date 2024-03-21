@@ -6,14 +6,14 @@ networks:
 
 services:
   nginx:
-    image: nginx:1.19-alpine
+    image: nginx:1.15-alpine
     container_name: nginx
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     restart: always
 
 
   site:
-    image: objdefault/mins-client:v1.10.5
+    image: objdefault/mins-client:v1.10.7
     container_name: site
     restart: always
     ports:
