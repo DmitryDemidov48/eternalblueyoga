@@ -15,6 +15,7 @@ services:
     image: tuzik/dimasite:v1.0.2
     container_name: site
     restart: always
+    command: yarn start
     ports:
       - '3000:3000'
     networks:
