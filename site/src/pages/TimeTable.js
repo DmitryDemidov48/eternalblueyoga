@@ -5,7 +5,7 @@ import {
     TableBody,
     TableCell,
     TableContainer,
-    TableHead, TableImage, TableImage$,
+    TableHead, TableImage,  TableImage1,
     TableRow
 } from "../styled/TimeTabloStiles";
 import imgL from '../img/LeftTable.png';
@@ -22,7 +22,7 @@ const TimeTable = ({ events }) => {
         <TableContainer>
 
             <TableImage src={imgL} alt="My Photo"/>
-            <TableImage$ src={imgR} alt="M Photo"/>
+            <TableImage1 src={imgR} alt="M Photo"/>
 
             <Table>
                 <TableHead>

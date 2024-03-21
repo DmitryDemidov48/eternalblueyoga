@@ -162,7 +162,7 @@ export const HomeImage = styled.img`
   }
 `;
 
-export const HomeImage$ = styled.img`
+export const HomeImage1 = styled.img`
   position: absolute;
   width: 50vw;
   height: 100%;

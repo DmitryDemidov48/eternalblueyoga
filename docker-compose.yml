@@ -19,7 +19,7 @@ services:
       - site-net
 
   site:
-    build: image:objdefault/mins-client:v1.11.2
+    image: objdefault/mins-client:v1.11.2
     container_name: site
     restart: always
     ports:

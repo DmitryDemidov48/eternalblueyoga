@@ -99,7 +99,7 @@ export const TableImage = styled.img`
     display: none;
   }
 `;
-export const TableImage$ = styled.img`
+export const TableImage1 = styled.img`
   display: none; /* Изначально скрываем изображение */
   position: absolute;
   width: 50vw;

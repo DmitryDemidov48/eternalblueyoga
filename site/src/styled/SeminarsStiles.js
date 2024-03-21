@@ -105,7 +105,7 @@ export const SemImage = styled.img`
     display: none;
   }
 `;
-export const SemImage$ = styled.img`
+export const SemImage1 = styled.img`
   display: block;
   position: fixed;
   width: 100vh;

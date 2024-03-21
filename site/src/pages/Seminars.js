@@ -8,7 +8,7 @@ import {
     PosterContainer,
     PosterDate, PosterDescription,
     PosterImage,
-    PosterTitle, SemImage, SemImage$
+    PosterTitle, SemImage, SemImage1
 } from "../styled/SeminarsStiles";
 import imgR from '../img/semRight.JPG';
 
@@ -33,7 +33,7 @@ const EventCalendar = () => {
 <>
    <HeaderFooter/>
      <Container>
-         <SemImage$ src={imgR} alt="My Photo"/>
+         <SemImage1 src={imgR} alt="My Photo"/>
          <SemImage src={imgL} alt="My Photo"/>
             {eventsData.map((event, index) => (
                 <PosterContainer key={index}>

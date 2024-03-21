@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import MainHeader from "./Header";
 import Sidebar from "./SideBar";
 import Footer from "./Footer";
@@ -8,23 +8,18 @@ const Menu = () => {
     const [isTablet, setIsTablet] = useState(false);
     const windowWidth = useWindowWidth();
 
-    const checkScreenSize = () => {
+    const checkScreenSize = useCallback(() => {
         setIsTablet(windowWidth <= 1400);
-    };
+    }, [windowWidth]);
 
     useEffect(() => {
         checkScreenSize();
-    }, [windowWidth]); // Добавляем зависимость windowWidth в массив зависимостей useEffect
+    }, [windowWidth, checkScreenSize]);
 
     return (
         <>
-            {/* Отображаем главный заголовок, если устройство не является планшетом */}
             {!isTablet && <MainHeader />}
-
-            {/* Передаем isTablet в компонент боковой панели */}
             <Sidebar isTablet={isTablet} />
-
-            {/* Отображаем футер внизу страницы */}
             <Footer />
         </>
     );

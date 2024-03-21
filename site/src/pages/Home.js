@@ -7,7 +7,7 @@ import {
     HomeButtonContainer,
     HomeContainer,
     HomeImage,
-    HomeImage$, HomeImageFooter,
+    HomeImage1, HomeImageFooter,
     HomePosterContainer,
     HomePosterDescription,
     HomePosterTitle,
@@ -31,7 +31,7 @@ const Home = () => {
                 <HeaderFooter/>
 
                 <HomeImage src={img} alt="My Photo" />
-                <HomeImage$ src={imgL} alt="M Photo" />
+                <HomeImage1 src={imgL} alt="M Photo" />
                 <HomeImageFooter src={imgFooter} alt="Photo" />
                 {eventsData.map((event, index) => (
                     <HomePosterContainer key={index}>
