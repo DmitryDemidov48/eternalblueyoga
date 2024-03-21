@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { Link } from "react-router-dom";
-import { HomeHeader } from "../styled/About/HomeStyles";
+import { HomeHeader } from "../styled/HomeStyles";
 import InfinitySymbol from "../animation/eternal";
 
 import AboutPhoto from '../img/aboutImg/about1.jpg'

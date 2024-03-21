@@ -2,7 +2,6 @@ import photo1 from '../../img/aboutImg/1.JPG';
 import photo2 from '../../img/aboutImg/2.jpg';
 import photo3 from '../../img/aboutImg/3.JPG';
 import photo4 from '../../img/aboutImg/4.JPG';
-import photo5 from '../../img/aboutImg/5.JPG';
 import photo6 from '../../img/aboutImg/6.JPG';
 import photo7 from '../../img/aboutImg/7.JPG';
 import photo8 from '../../img/aboutImg/8.JPG';

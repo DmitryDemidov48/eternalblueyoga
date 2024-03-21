@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { MenuData } from "../add/MenuData";
 import { BsPatchCheckFill, BsPatchMinusFill } from 'react-icons/bs';
@@ -9,33 +8,23 @@ import {
     SidebarContent,
     SidebarIcon,
     SideButton,
-    SidebarLink, SidebarTitle, SidebarTitleContainer,
-} from "../../styled/MenuStyled/SecondarySidebarStyles";
+    SidebarLink,
+    SidebarTitle,
+    SidebarTitleContainer,
+} from "../../styled/SecondarySidebarStyles";
 import useWindowWidth from "../../hook/useWindowWidth";
-import {useHover} from "../../hook/useHover";
-
-import InfinitySymbol from "../../animation/eternal";
-
-
-
-
-
-
-
+import { useHover } from "../../hook/useHover";
 
 const SecondarySidebar = ({ isOpen, toggleSidebar }) => {
     const [hoveredIcons, handleMouseEnter, handleMouseLeave] = useHover();
     const windowWidth = useWindowWidth();
 
-
     return (
         <>
             <SidebarTitleContainer>
-
                 <SidebarTitle> </SidebarTitle>
-
             </SidebarTitleContainer>
-            {windowWidth < 1400 &&  windowWidth > 699&& ( // Проверка условия ширины окна
+            {windowWidth < 1400 &&  windowWidth > 699&& (
                 <SidebarContainer isOpen={!isOpen}>
                     <SidebarContent>
                         {MenuData.map(({ title, path, icon }) => (

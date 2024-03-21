@@ -1,5 +1,5 @@
 import React from 'react';
-import {HomeHeader, HomeIcon, HomeTitle} from "../../styled/About/HomeStyles";
+import {HomeHeader, HomeIcon, HomeTitle} from "../../styled/HomeStyles";
 import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
 import {FaWhatsapp} from "react-icons/fa6";
 import InfinityAnimation from "../../animation/eternal";

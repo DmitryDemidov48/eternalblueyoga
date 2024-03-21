@@ -1,11 +1,4 @@
 import styled, {keyframes} from "styled-components";
-
-import { PosterContainer } from "../SeminarsStyled/SeminarsStiles";
-
-import table from '../../img/table.jpg'
-
-
-import { Link as RouterLink } from 'react-router-dom'; 
 import { Link } from 'react-scroll';
 
 export const HomeContainer = styled.div`
@@ -169,7 +162,7 @@ export const HomeImage = styled.img`
   }
 `;
 
-export const HomeImage$ = styled.img`
+export const HomeImage1 = styled.img`
   position: absolute;
   width: 50vw;
   height: 100%;
