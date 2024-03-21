@@ -4,3 +4,4 @@ COPY . /web
 WORKDIR /web
 
 CMD ["yarn", "start"]
+
