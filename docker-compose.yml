@@ -10,6 +10,8 @@ services:
     container_name: nginx
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     restart: always
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
       - 443:433
