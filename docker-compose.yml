@@ -12,7 +12,7 @@ services:
     restart: always
 
   site:
-    image: tuzik/dimasite:v1.0.2
+    image: tuzik/dimasite:v1.0.3
     container_name: site
     restart: always
     command: echo
