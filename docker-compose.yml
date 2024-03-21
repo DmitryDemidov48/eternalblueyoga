@@ -18,7 +18,7 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=3000
-    command: HOST=0.0.0.0 yarn start
+    command: set HOST=0.0.0.0 yarn start
     ports:
       - '3000:3000'
     networks:
