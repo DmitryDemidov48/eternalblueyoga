@@ -1,4 +1,4 @@
-ROM node:21.6-alpine
+FROM node:20.11-alpine
 
 COPY . /web
 WORKDIR /web
