@@ -1,32 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MainHeader from "./Header";
 import Sidebar from "./SideBar";
 import Footer from "./Footer";
 import useWindowWidth from "../../hook/useWindowWidth";
 
-
-
-
 const Menu = () => {
     const [isTablet, setIsTablet] = useState(false);
-    const windowWidth = useWindowWidth(); // Используем кастомный хук для получения текущей ширины окна
+    const windowWidth = useWindowWidth();
 
-    // Функция для проверки размера экрана
     const checkScreenSize = () => {
-        setIsTablet(windowWidth <= 1400); // Устанавливаем isTablet в true, если ширина окна меньше или равна 1400px
+        setIsTablet(windowWidth <= 1400);
     };
 
-    // Вызываем функцию проверки размера экрана при монтировании компонента и при изменении размера окна
     useEffect(() => {
         checkScreenSize();
-    }, [windowWidth]);
+    }, [windowWidth]); // Добавляем зависимость windowWidth в массив зависимостей useEffect
 
     return (
         <>
-            {!isTablet && <MainHeader />} {/* Отображаем главный заголовок, если устройство не является планшетом */}
-            <Sidebar isTablet={isTablet} /> {/* Передаем isTablet в компонент боковой панели */}
+            {/* Отображаем главный заголовок, если устройство не является планшетом */}
+            {!isTablet && <MainHeader />}
 
-            <Footer /> {/* Отображаем футер внизу страницы */}
+            {/* Передаем isTablet в компонент боковой панели */}
+            <Sidebar isTablet={isTablet} />
+
+            {/* Отображаем футер внизу страницы */}
+            <Footer />
         </>
     );
 };
