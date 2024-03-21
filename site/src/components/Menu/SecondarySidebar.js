@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { MenuData } from "../add/MenuData";
 import { BsPatchCheckFill, BsPatchMinusFill } from 'react-icons/bs';
@@ -10,11 +10,10 @@ import {
     SidebarIcon,
     SideButton,
     SidebarLink, SidebarTitle, SidebarTitleContainer,
-} from "../../styled/MenuStyled/SecondarySidebarStyles";
+} from "../../styled/SecondarySidebarStyles";
 import useWindowWidth from "../../hook/useWindowWidth";
 import {useHover} from "../../hook/useHover";
 
-import InfinitySymbol from "../../animation/eternal";
 
 
 

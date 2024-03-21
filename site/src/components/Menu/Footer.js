@@ -1,5 +1,5 @@
 import React from 'react';
-import {FooterContainer, FooterIcon, IconFooter, FooterNav, StyledLink} from "../../styled/MenuStyled/FooterStyles";
+import {FooterContainer, FooterIcon, IconFooter, FooterNav, StyledLink} from "../../styled/FooterStyles";
 import { MenuData } from "../add/MenuData";
 import useWindowWidth from "../../hook/useWindowWidth";
 import {useHover} from "../../hook/useHover";

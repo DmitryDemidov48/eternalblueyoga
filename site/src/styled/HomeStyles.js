@@ -1,11 +1,4 @@
 import styled, {keyframes} from "styled-components";
-
-import { PosterContainer } from "../SeminarsStyled/SeminarsStiles";
-
-import table from '../../img/table.jpg'
-
-
-import { Link as RouterLink } from 'react-router-dom'; 
 import { Link } from 'react-scroll';
 
 export const HomeContainer = styled.div`

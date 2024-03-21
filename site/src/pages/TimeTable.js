@@ -7,15 +7,10 @@ import {
     TableContainer,
     TableHead, TableImage, TableImage$,
     TableRow
-} from "../styled/TimeTabloStyled/TimeTabloStiles";
+} from "../styled/TimeTabloStiles";
 import imgL from '../img/LeftTable.png';
 import imgR from '../img/RightTible.JPG';
 
-import {HomeHeader, HomeIcon, HomeTitle} from "../styled/About/HomeStyles";
-import InfinitySymbol from "../animation/eternal";
-import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
-import {FaWhatsapp} from "react-icons/fa6";
-import InfinityAnimation from "../animation/eternal";
 
 import HeaderFooter from "../components/Menu/HeaderFooter";
 
@@ -27,7 +22,7 @@ const TimeTable = ({ events }) => {
         <TableContainer>
 
             <TableImage src={imgL} alt="My Photo"/>
-            <TableImage$ src={imgR} alt="My Photo"/>
+            <TableImage$ src={imgR} alt="M Photo"/>
 
             <Table>
                 <TableHead>

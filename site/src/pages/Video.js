@@ -43,21 +43,6 @@ margin: 0 auto;
   }
 `;
 
-const ImageWrapper = styled.div`
-  width: 300px; /* Ширина фотографии */
-  height: 300px; /* Высота фотографии */
-  margin: 10px; /* Отступ между фотографиями */
-  
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%); /* Превращение изображений в черно-белый */
-  image-rendering: pixelated; /* Пиксельный эффект */
- 
-`;
 
 
 

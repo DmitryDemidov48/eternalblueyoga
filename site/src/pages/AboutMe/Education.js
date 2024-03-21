@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
-import {HomeHeader} from "../../styled/About/HomeStyles";
+import {HomeHeader} from "../../styled/HomeStyles";
 
 // Стили для контейнера с образованием
 const EducationContainer = styled.div`

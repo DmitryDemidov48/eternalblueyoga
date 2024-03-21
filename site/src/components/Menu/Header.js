@@ -1,7 +1,6 @@
 
-
 import React from 'react';
-import {HeaderWrapper, Title, Nav, Button, StyledLink, Icon,} from "../../styled/MenuStyled/HeaderStyles";
+import {HeaderWrapper, Title, Nav, Button, StyledLink, Icon,} from "../../styled/HeaderStyles";
 import { MenuData } from "../add/MenuData";
 import {useHover} from "../../hook/useHover";
 import InfinityAnimation from "../../animation/eternal";
