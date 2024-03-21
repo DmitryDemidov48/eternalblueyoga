@@ -24,7 +24,7 @@ services:
         max-file: "3"          # Максимальное количество хранящихся лог-файлов
 
   site:
-    image: objdefault/mins-client:v1.10.1
+    image: objdefault/mins-client:v1.10.0
     container_name: site
     restart: always
     ports:
