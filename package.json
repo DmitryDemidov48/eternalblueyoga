@@ -18,13 +18,14 @@
     "react-router-dom": "^6.22.1",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.9.0",
+    "serve": "^14.2.1",
     "setimmediate": "^1.0.5",
     "socket.io-client": "^4.7.4",
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build -l tcp://0.0.0.0",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

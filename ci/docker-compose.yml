@@ -9,18 +9,18 @@ services:
     image: nginx:1.15-alpine
     container_name: nginx
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
-      - 80:80
-      - 443:433
+      - '80:80'
+      - '443:433'
 
   site:
-    image: tuzik/dimasite:v1.0.4
+    image: tuzik/dimasite:v1.0.5
     container_name: site
-    restart: always
-    ports:
-      - '3000:3000'
+    restart: unless-stopped
+    expose:
+      - '3000'
     networks:
       - site-net
