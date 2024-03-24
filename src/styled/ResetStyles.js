@@ -18,13 +18,13 @@ export const ResetStyles = createGlobalStyle`
     margin: 0 auto;
     width: auto;
 
-    max-width: 1500px; /* Устанавливаем максимальную ширину */
+    max-width: 1400px; /* Устанавливаем максимальную ширину */
     font-size: 100%;
-    padding-left: 10px; /* Отступ слева */
-    padding-right: 10px; /* Отступ справа */
+    padding-left: 0; /* Отступ слева */
+    padding-right: 0; /* Отступ справа */
     vertical-align: baseline;
     box-sizing: border-box;
-    
+
   }
 
   /* Улучшение семантики HTML5 */
@@ -33,10 +33,23 @@ export const ResetStyles = createGlobalStyle`
     display: block;
   }
 
+  #root {
+    padding: 0;
+    margin: 0;
+  }
+
   body {
     line-height: 1;
     background-color: #000000;
     font-family: 'Libre Baskerville', 'Public Sans', serif;
+/*    border: 2px solid #11ff00;*/
+    overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+    overflow-y: auto;
+    max-width: 1400px;
+    margin: 0; /* Убираем внешние отступы у body */
+    padding: 0; /* Обнуляем внутренние отступы, если они есть */
+
+
   }
 
   ol, ul {
@@ -51,7 +64,7 @@ export const ResetStyles = createGlobalStyle`
   q:before, q:after {
     content: '';
 
-   
+
   }
 
   table {

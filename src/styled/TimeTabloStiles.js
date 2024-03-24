@@ -1,65 +1,67 @@
 import { styled } from "styled-components";
 
 export const TableContainer = styled.div`
-
-  position: fixed;
-  text-align: start;
-  margin: 0 auto;
-  left: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
-  height: 100%;
-  background: #090909;
-  z-index: -1;
+  height: 85vh; /* Максимальная высота контейнера */
+  padding: 2%; /* Отступ внутри контейнера */
+  overflow: hidden;
+/*  border: 1px solid #0719da;*/
 
   @media screen and (max-width: 1400px) {
-    background: #000000;
-    display: flex;
-    justify-content: end;
-    margin-right: 5px; /* Устанавливаем правый отступ */
-    padding-top: 40px;
-    width: 100%;
-    height: auto;
 
+    height: 91vh;
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем контент по вертикали */
+    justify-content: flex-end; /* Выравниваем контент по правому краю */
   }
+
   @media screen and (max-width: 700px) {
-    margin: auto ;
-    text-align: center;
-    padding-top: 200px;
-    width: 100%;
-    height: 100%;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f3f3f3;
+    margin-top: 80px;
+    justify-content: center; /* Центрирование по горизонтали */
   }
 `;
 
 
 
 export const Table = styled.table`
-  width: 45vw;
-  
+  width: 45%;
+  border: 2px solid #faf8f8;
   overflow: hidden;
-  margin: 30px;
+  margin-top: 100px;
+  margin-left: 3%;
+  height: 50%;
+  
+ 
 
   @media screen and (max-width: 1400px) {
-    max-width: 85vw;
+    width: 50%;
     height: auto;
+    margin-right: -1%;
+    margin-top: -5%;
   }
   @media screen and (max-width: 700px) {
-    width: 85vw;
-    margin-top: -300px;
+    width: 100vw;
+    margin-top: -50%;
+    margin-right: 0;
+    margin-left: 0;
+
   }
 `;
 
 export const TableHead = styled.thead`
   background-color: #0a0a0a;
   color: white;
+  
+  
 `;
 
 export const TableBody = styled.tbody`
   background-color: #f5f5f5;
+
 `;
 
 export const TableRow = styled.tr`
@@ -72,15 +74,28 @@ export const TableCell = styled.td`
   padding: 1rem; /* Используем rem */
   border: 1px solid #dddddd;
   text-align: center;
+  font-size: 18px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  
 
   &:first-child {
     text-align: left;
-    width: 15.625rem; /* Используем rem */
+    width: 4.625rem; /* Используем rem */
   }
 
   &:nth-child(2),
   &:nth-child(3) {
     width: 6.25rem; /* Используем rem */
+  }
+
+  @media screen and (max-width: 1400px) {
+    font-size: 11px;
+
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 10px;
+
   }
 `;
 
@@ -88,11 +103,12 @@ export const TableCell = styled.td`
 
 export const TableImage = styled.img`
   position: absolute;
-  width: 50vw; /* Ширина изображения равна ширине видимой области браузера */
-  height: 100%; /* Высота изображения равна высоте видимой области браузера */
-  top: -100px;
-  right: -10px;
-  object-fit: cover; /* Масштабирование изображения так, чтобы оно полностью покрывало контейнер */
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  
  
 
   @media screen and (max-width: 1400px) {

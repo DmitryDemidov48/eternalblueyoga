@@ -11,7 +11,7 @@ const Footer = ({ isOpen, toggleSidebar }) => {
 
     return (
         <>
-            {windowWidth < 700 && (
+            {windowWidth <=700 && (
                 <FooterContainer isOpen={!isOpen}>
                     <FooterNav>
                         {MenuData.map(({ title, path, icon }) => (

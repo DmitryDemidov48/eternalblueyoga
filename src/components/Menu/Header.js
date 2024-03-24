@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {HeaderWrapper, Title, Nav, Button, StyledLink, Icon,} from "../../styled/HeaderStyles";
+import {HeaderWrapper, Title, Nav, Button, StyledLink, Icon, HeaderMenu,} from "../../styled/HeaderStyles";
 import { MenuData } from "../add/MenuData";
 import {useHover} from "../../hook/useHover";
 import InfinityAnimation from "../../animation/eternal";
@@ -15,7 +15,7 @@ const MainHeader = () => {
         <HeaderWrapper>
 
             <Title> Eternal Blue Yoga<InfinityAnimation/></Title>
-
+        <HeaderMenu>
             <Nav >
                 {MenuData.map(({ title, path, icon }) => (
                     <StyledLink key={title} onMouseEnter={() => handleMouseEnter(title)} onMouseLeave={() => handleMouseLeave(title)}>
@@ -24,6 +24,7 @@ const MainHeader = () => {
                     </StyledLink>
                 ))}
             </Nav>
+        </HeaderMenu>
         </HeaderWrapper>
     );
 };

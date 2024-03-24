@@ -1,60 +1,76 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-
+import imgFooter from '../../img/aboutImg/12.JPG'
 import { HomeHeader } from "../../styled/HomeStyles";
+import {BackButtonAbout} from "./Education";
 
 const Container = styled.div`
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
-  height: calc(100% - 70px); /* Отнимаем высоту футера от высоты контейнера */
-  background: #ffffff;
-  overflow-y: auto; /* Добавляем вертикальный скроллинг при необходимости */
-
-  @media screen and (min-width: 700px) and (max-width: 1400px) {
-    max-width: 100%;
-    margin-left: 200px;
-
+  height: 85vh; /* Максимальная высота контейнера */
+/*  border: 2px solid #0e11d3;*/
+  overflow: hidden;
+  background-color: white;
+  @media screen and (max-width: 1400px) {
+    z-index: -1;
+    height: 91vh;
   }
   @media screen and (max-width: 700px) {
-    height: calc(100% - 50px); /* Отнимаем высоту футера от высоты контейнера */
+    height: 94vh;
   }
 `;
 
 const Title = styled.h2`
-  margin-top: 50px;
-  font-size: 24px;
-  margin-bottom: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-weight: 200;
+  margin-top: 3%;
+  width: auto;
+  height: auto;
+  font-size: 20px; /* Уменьшение размера текста */
+  margin-bottom: 20px; /* Отступ снизу */
+  /*border: 2px solid red;*/
 
   @media screen and (min-width: 700px) and (max-width: 1400px) {
-    margin-top: 40px;
-    margin-right: 200px;
+  
   }
   @media screen and (max-width: 700px){
-    margin-top: 100px;
-    margin-bottom: 30px;
+  
   }
 `;
 
 const ParagraphContainer = styled.div`
-
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin-left: 0;
+ /* border: 2px solid #0e11d3;*/
+  @media screen and (max-width: 1400px) {
+    margin-left: 50%;
+    text-align: center;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: 0 auto;
+    top: 10%;
+  }
 `;
 
 const ParagraphTitle = styled.span`
- 
-  margin: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
   font-weight: bold;
   font-size: 15px;
   color: #333;
-  text-transform: uppercase;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-  letter-spacing: 1px;
-  text-align: center; /* Прижимаем текст к левому краю */
-
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 700px) {
     margin-left: 0;
   }
 
@@ -70,17 +86,20 @@ const ParagraphTitle = styled.span`
 
 
 const Paragraph = styled.p`
+  font-family: Georgia, serif;
+  font-weight: 200;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   color: #0e0e0e;
-  font-size: 18px;
+  font-size: 16px; /* Уменьшение размера шрифта */
   line-height: 1.2;
-  margin-top: 20px;
+  margin-top: 0;
+  width: auto; /* Установка ширины на автоматический размер */
+/*  border: 2px solid red;*/
 
   @media screen and (min-width: 700px) and (max-width: 1400px) {
-    margin-right: 200px;
-    margin-bottom: 20px;
+    
   }
   @media screen and (max-width: 700px){
     margin-top: 20px;
@@ -100,27 +119,53 @@ const BackButton = styled(Link)`
 
   &:hover {
     background-color: #0e60c5;
+    color: white;
+  }
+`;
+export const HomeImageFooter = styled.img`
+
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  @media screen and (max-width: 1400px) {
+    position: fixed;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  @media screen and (max-width: 700px) {
+    display: none;
   }
 `;
 
 const SeminarsAndWorkshops = () => {
     return (
         <>
-            <HomeHeader> <BackButton to="/about">Назад</BackButton> </HomeHeader>
+            <HomeHeader>
+
+                <BackButton to="/about">Назад</BackButton>
+            </HomeHeader>
             <Container>
-                <Title>Мои Учебные Студии</Title>
+                <HomeImageFooter src={imgFooter} alt="Photo" />
                 <ParagraphContainer>
-                    <ParagraphTitle>1<strong>Мос Йога</strong></ParagraphTitle>
+                <Title>Мои Учебные Студии</Title>
+                    <ParagraphTitle><strong> Московская школа йоги</strong></ParagraphTitle>
                     <Paragraph>
-                        адрес
+                        М. Чистые пруды, Мясницкая ул., 24/7, стр. 2, Москва
                         </Paragraph>
-                    <ParagraphTitle>1<strong>Импуль</strong></ParagraphTitle>
+                    <ParagraphTitle><strong>Ресурс</strong></ParagraphTitle>
                     <Paragraph>
-                        адрес
+                        М. Щукино, м. Октябрьское поле, ЖК «Серебряный парк» ул. Паршина, д. 10
                       </Paragraph>
-
-
+                    <BackButtonAbout to="/about">Назад</BackButtonAbout>
                 </ParagraphContainer>
+
             </Container>
         </>
     );

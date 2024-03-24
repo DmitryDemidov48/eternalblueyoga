@@ -3,26 +3,50 @@ import { NavLink } from "react-router-dom";
 
 const HeaderWrapper = styled.header`
   position: relative;
-  margin: auto;
-  width: 100%;
+  margin: 0; /* Убираем внешние отступы, чтобы контейнер прилегал к краям <body> */
+  width: 100%; /* Занимает всю доступную ширину */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   height: 100px;
   background: inherit;
   overflow: hidden; /* Предотвращает выход за границы */
+  z-index: 999;
+  
+ 
+  max-width: 100%; /* Обеспечивает, чтобы максимальная ширина была равна ширине родительского элемента */
+
 `;
 
+const HeaderMenu = styled.div `
+  display: flex;
+  align-items: center; /* Центрируем по вертикали */
+  justify-content: center; /* Центрируем по горизонтали */
+  width: 50%;
+  margin-right: 0;
+  height: 100%;
+  background: white;
+ 
+ 
+`;
+
+
 const Title = styled.h1`
+  font-family: Georgia, serif;
+font-weight: 400;
   display: flex;
   align-content: center;
   margin: 0 10px; /* Перемещает заголовок влево */
   align-items: center;
   color: #ffffff;
-  font-size: 34px;
+  font-size: 24px;
 
-  @media screen and (max-width: 768px) {
+  background-position: 0 100%;
+  background-size: 100% 2px; /* Ширина и высота подчеркивания */
+  background-repeat: no-repeat;
+
+
+  @media screen and (max-width: 700px) {
     font-size: 24px; /* Уменьшаем размер шрифта для мобильных устройств */
   }
 `;
@@ -31,9 +55,10 @@ const Nav = styled.nav`
   position: absolute;
   display: flex;
   align-items: center;
-  right: 50px; /* Перемещаем навигацию вправо */
-  
-  @media screen and (max-width: 768px) {
+  font-family: Georgia, serif;
+  font-weight: 200;
+  right: 40px; /* Перемещаем навигацию вправо */
+  @media screen and (max-width: 700px) {
     position: static; /* Переключаем позиционирование для мобильных устройств */
     justify-content: flex-end; /* Выравниваем элементы по правому краю */
     width: 100%; /* Растягиваем навигацию на всю ширину */
@@ -44,47 +69,47 @@ const Nav = styled.nav`
 const Button = styled(NavLink)`
   display: flex;
   align-items: center;
-  color: white;
+  
+  color: #050505;
   border: none;
   background-color: transparent;
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
-  border-radius: 3px;
-  border-bottom: 3px;
-  margin-left: -15px; /* Уменьшаем расстояние между кнопками */
-  
+ 
+ 
+ 
 
   &:first-child {
     margin-left: 0; /* Убираем отступ у первой кнопки */
   }
-  
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 700px) {
     margin: 0 5px; /* Уменьшаем отступы для мобильных устройств */
   }
 `;
 
 const StyledLink = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: 10px;
-  margin-left: -30px; /* Уменьшаем расстояние между иконками */
 
-  @media screen and (max-width: 768px) {
+  display: flex;
+
+
+  border: 14px solid white;
+
+  @media screen and (max-width: 700px) {
     margin: 0 5px; /* Уменьшаем отступы для мобильных устройств */
   }
 `;
 
 const Icon = styled.span`
-  color: #737272;
+  color: #0e0e0e;
   font-size: 24px;
   transition: transform 0.3s;
   transform: scale(${props => props['data-isHovered'] ? '1.33' : '1'}); /* Используем data-isHovered */
   margin: 0 5px; /* Добавляем небольшое расстояние между иконками */
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 700px) {
     font-size: 20px; /* Уменьшаем размер иконок для мобильных устройств */
   }
 `;
 
-export { HeaderWrapper, Title, Nav, Button, StyledLink, Icon };
+export { HeaderWrapper, Title, Nav, Button, StyledLink, Icon,HeaderMenu };

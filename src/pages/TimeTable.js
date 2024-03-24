@@ -1,11 +1,12 @@
 import React from 'react';
 
 import {
+    ItemTableBody,
     Table,
     TableBody,
     TableCell,
     TableContainer,
-    TableHead, TableImage,  TableImage1,
+    TableHead, TableImage, TableImage1,
     TableRow
 } from "../styled/TimeTabloStiles";
 import imgL from '../img/LeftTable.png';
@@ -32,6 +33,7 @@ const TimeTable = ({ events }) => {
                         <TableCell>Дата</TableCell>
                     </TableRow>
                 </TableHead>
+
                 <TableBody>
                     {events.map((event, index) => (
                         <TableRow key={index}>
@@ -41,7 +43,9 @@ const TimeTable = ({ events }) => {
                         </TableRow>
                     ))}
                 </TableBody>
+
             </Table>
+
         </TableContainer>
             </>
     );

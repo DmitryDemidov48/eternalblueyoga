@@ -5,7 +5,7 @@ import imgFooter from '../img/aboutImg/12.JPG'
 import {
     HomeButton,
     HomeButtonContainer,
-    HomeContainer,
+    HomeContainer, HomeIcon, HomeIcons,
     HomeImage,
     HomeImage1, HomeImageFooter,
     HomePosterContainer,
@@ -14,6 +14,8 @@ import {
 } from "../styled/HomeStyles";
 
 import HeaderFooter from "../components/Menu/HeaderFooter";
+import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
+import {FaWhatsapp} from "react-icons/fa6";
 
 const Home = () => {
     const eventsData = [
@@ -40,6 +42,7 @@ const Home = () => {
                         <HomeButtonContainer>
                             <HomeButton to="/about">Обо Мне</HomeButton>
                         </HomeButtonContainer>
+                        <HomeIcons ><FaTelegramPlane /><FaInstagram /><FaWhatsapp /></HomeIcons>
                     </HomePosterContainer>
                 ))}
 
