@@ -16,7 +16,7 @@ services:
       - site-net
     ports:
       - '80:80'
-      - '443:433'
+      - '443:443'
 
   site:
     image: objdefault/eternal:v1.10.6
