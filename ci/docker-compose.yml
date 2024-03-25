@@ -12,6 +12,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
+      - - ./data/certbot/conf:/etc/letsencrypt
+          - ./data/certbot/www:/var/www/certbot
     networks:
       - site-net
     ports:
@@ -19,10 +21,14 @@ services:
       - '443:443'
 
   site:
-    image: objdefault/eternal:v1.10.11
+    image: objdefault/eternal:v1.10.12
     container_name: site
     restart: unless-stopped
     expose:
       - '3000'
     networks:
       - site-net
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
