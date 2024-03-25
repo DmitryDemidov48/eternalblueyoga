@@ -75,7 +75,8 @@ export const SidebarButton = styled(Link)`
   display: flex;
   justify-content: start;
   color: white;
- 
+  font-family: Georgia, serif;
+  font-weight: 200;
  
   cursor: pointer;
   text-decoration: none;

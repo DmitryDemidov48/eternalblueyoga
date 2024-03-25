@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  height: 85vh; /* Максимальная высота контейнера */
+  height: 100vh; /* Максимальная высота контейнера */
 /*  border: 2px solid #0e11d3;*/
   overflow: hidden;
   background-color: white;
@@ -70,6 +70,7 @@ const ParagraphContainerTitle = styled.div`
 
 
 const Paragraph = styled.p`
+  padding: 15px;
   font-family: Georgia, serif;
   font-weight: 200;
   display: flex;
@@ -117,7 +118,7 @@ export const HomeImageFooter = styled.img`
   @media screen and (max-width: 1400px) {
     position: fixed;
     width: 50vw;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: -50%;
     object-fit: cover;

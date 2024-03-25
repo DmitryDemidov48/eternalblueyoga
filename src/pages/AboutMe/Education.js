@@ -75,6 +75,7 @@ const EducationTitle = styled.h2`
 
 // Стили для текста об образовании
 const EducationText = styled.p`
+  padding: 15px;
   font-family: Georgia, serif;
   font-weight: 200;
   position: relative;
@@ -141,7 +142,7 @@ const BackButton = styled(Link)`
 const HomeImageFooter = styled.img`
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   right: 0;
   object-fit: cover;

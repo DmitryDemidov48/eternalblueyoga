@@ -68,16 +68,19 @@ const VideoViewer = () => {
         <>
             <HeaderFooter></HeaderFooter>
         <Container>
-            <VideoContainer>
+            <h1 style={{color: 'white'}}>Скоро здесь будет видео <span style={{color: 'white'}}></span></h1>
+
+            {/* <VideoContainer>
                 {video.map((video) => (
                     <VideoWrapper key={video.id}>
                         <Video controls>
+
                             <source src={video.src} type="video/mp4" />
                             Ваш браузер не поддерживает видео в формате MP4.
                         </Video>
                     </VideoWrapper>
                 ))}
-            </VideoContainer>
+            </VideoContainer>*/}
         </Container>
             </>
     );

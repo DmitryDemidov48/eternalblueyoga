@@ -4,11 +4,11 @@ import TimeTable from '../pages/TimeTable';
 
 
  const localEvents = [
-    { place: "Мосйога", time: "19:00 – 20:30", date: "22.03" },
-     { place: "Ресурс", time: "20:00 – 21:30", date: "23.03" },
-    { place: "Мосйога", time: "19:00 – 20:30", date: "24.03" },
-     { place: "Ресурс", time: "20:15 – 21:45", date: "25.03" },
-    { place: "Мосйога", time: "19:00 – 20:30", date: "26.03" },
+    { place: "Мосйога", time: "19:00 – 20:30", date: "Понедельник" },
+     { place: "Ресурс", time: "20:00 – 21:30", date: "Вторник" },
+    { place: "Мосйога", time: "19:00 – 20:30", date: "Среда" },
+     { place: "Ресурс", time: "20:15 – 21:45", date: "Четверг" },
+    { place: "Мосйога", time: "19:00 – 20:30", date: "Пятница" },
 
 
 ];

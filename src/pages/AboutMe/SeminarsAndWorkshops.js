@@ -74,6 +74,7 @@ const ParagraphTitle = styled.span`
 
 
 const Paragraph = styled.p`
+  padding: 15px;
   font-family: Georgia, serif;
   font-weight: 200;
   display: flex;
@@ -114,7 +115,7 @@ export const HomeImageFooter = styled.img`
 
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   right: 0;
   object-fit: cover;

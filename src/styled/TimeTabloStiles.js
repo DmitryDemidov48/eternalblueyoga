@@ -6,7 +6,7 @@ export const TableContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  height: 85vh; /* Максимальная высота контейнера */
+  height: 100vh; /* Максимальная высота контейнера */
   padding: 2%; /* Отступ внутри контейнера */
   overflow: hidden;
 /*  border: 1px solid #0719da;*/
@@ -31,7 +31,7 @@ export const Table = styled.table`
   width: 45%;
   border: 2px solid #faf8f8;
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: 3%;
   height: 50%;
   
@@ -104,7 +104,7 @@ export const TableCell = styled.td`
 export const TableImage = styled.img`
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 90vh;
   top: 0;
   right: 0;
   object-fit: cover;

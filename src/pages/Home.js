@@ -5,7 +5,7 @@ import imgFooter from '../img/aboutImg/12.JPG'
 import {
     HomeButton,
     HomeButtonContainer,
-    HomeContainer, HomeIcon, HomeIcons,
+    HomeContainer,  HomeIcons,
     HomeImage,
     HomeImage1, HomeImageFooter,
     HomePosterContainer,

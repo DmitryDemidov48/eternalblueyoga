@@ -37,10 +37,10 @@ const draw = keyframes`
 `;
 
 const Path = styled.path`
-  stroke-width: 12;
+ /* stroke-width: 12;
   stroke-dasharray: 750;
   stroke-dashoffset: -700;
-  animation: ${draw} 3s linear forwards , ${flicker} 4s ease-in-out infinite; // Применяем анимацию отрисовки и мерцания
+  animation: ${draw} 3s linear forwards , ${flicker} 4s ease-in-out infinite; // Применяем анимацию отрисовки и мерцания*/
 `;
 
 // Функциональный компонент, возвращающий SVG-элемент с контуром символа бесконечности

@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  height: 85vh; /* Максимальная высота контейнера */
+  height: 100vh; /* Максимальная высота контейнера */
   padding: 2%; /* Отступ внутри контейнера */
   overflow: hidden;
 /*  border: 1px solid #0719da;*/
@@ -153,7 +153,7 @@ margin-top: -10%;
   }
 `;
 
-const baseFontSize = 2.5; // Базовый размер шрифта в vw
+
 
 export const HomePosterTitle = styled.h1`
   font-family: Georgia, serif;
@@ -221,7 +221,7 @@ export const HomeImage = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: -60%;
+  top: -50%;
   right: 0;
   object-fit: cover;
   z-index: -1;
@@ -236,7 +236,7 @@ export const HomeImage1 = styled.img`
   width: 50vw;
   height: 94vh;
   top: 0;
-  left: -10px;
+  left: -50px;
   object-fit: cover;
   z-index: -1;
   display: none;

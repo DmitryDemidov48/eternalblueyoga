@@ -4,6 +4,9 @@
   "private": false,
   "homepage": "https://www.eternalblueyoga.ru",
   "dependencies": {
+    "@capacitor/cli": "^5.7.4",
+    "@capacitor/core": "^5.7.4",
+    "@capacitor/ios": "^5.7.4",
     "@emotion/is-prop-valid": "^1.2.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

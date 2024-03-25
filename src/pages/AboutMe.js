@@ -113,7 +113,8 @@ const StyledListItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  font-family: 'Press Start 2P', cursive;
+  font-family: Georgia, serif;
+  font-weight: 200;
   font-size: 20px;
   padding: 10px 20px;
   background-color: #faf9f7;
@@ -150,7 +151,7 @@ const StyledLink = styled(Link)`
 export const HomeImageFooter = styled.img`
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   right: 0;
   object-fit: cover;
@@ -158,7 +159,7 @@ export const HomeImageFooter = styled.img`
   @media screen and (max-width: 1400px) {
   position: fixed;
     width: 50vw;
-    height: 100%;
+    height: 100vh;
     top: 0;
   left: -50%;
     object-fit: cover;

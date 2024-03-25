@@ -154,7 +154,8 @@ export const SemImage = styled.img`
 export const SemImage1 = styled.img`
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 100vh;
+  
   top: 0;
   right: 0;
   object-fit: cover;

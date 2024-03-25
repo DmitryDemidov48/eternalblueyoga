@@ -36,10 +36,11 @@ const Title = styled.h1`
 font-weight: 400;
   display: flex;
   align-content: center;
-  margin: 0 10px; /* Перемещает заголовок влево */
+  
   align-items: center;
   color: #ffffff;
   font-size: 24px;
+margin-left: 17%;
 
   background-position: 0 100%;
   background-size: 100% 2px; /* Ширина и высота подчеркивания */
@@ -69,7 +70,8 @@ const Nav = styled.nav`
 const Button = styled(NavLink)`
   display: flex;
   align-items: center;
-  
+  font-family: Georgia, serif;
+  font-weight: 200;
   color: #050505;
   border: none;
   background-color: transparent;
