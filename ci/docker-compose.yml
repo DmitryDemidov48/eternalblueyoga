@@ -30,7 +30,7 @@ services:
       - site-net
 
   certbot:
-      image: certbot/certbot
+      image: certbot/certbot:v1.10.1
       restart: unless-stopped
       volumes:
         - ./data/certbot/conf:/etc/letsencrypt
