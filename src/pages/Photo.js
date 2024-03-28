@@ -15,7 +15,7 @@ const Container = styled.div`
   overflow: hidden;
 /*  border: 1px solid #0719da;*/
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
 
     height: 91vh;
     display: flex; /* Используем flexbox */
@@ -24,7 +24,8 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    margin-top: 9%;
+    margin-top: 10%;
+   
     justify-content: center; /* Центрирование по горизонтали */
   }
 `;
@@ -37,7 +38,7 @@ const ScrollableContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
 padding-left: 20%;
     margin-left: 0; /* Убираем отрицательный отступ */
   }

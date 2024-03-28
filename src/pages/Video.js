@@ -13,7 +13,7 @@ const Container = styled.div`
   overflow: hidden;
   /*border: 1px solid #0719da;*/
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
 
     height: 91vh;
     display: flex; /* Используем flexbox */
@@ -35,7 +35,7 @@ const VideoContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
     padding-left: 20%;
     margin-left: 0; /* Убираем отрицательный отступ */
   }

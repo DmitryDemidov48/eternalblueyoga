@@ -2,9 +2,10 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { Link } from "react-router-dom";
-import { HomeHeader } from "../styled/HomeStyles";
+
 import InfinitySymbol from "../animation/eternal";
 import imgFooter from '../img/aboutImg/12.JPG'
+import {HomeContainer, HomeHeader} from "./Home";
 
 
 const fadeInText = keyframes`
@@ -18,51 +19,33 @@ const fadeInText = keyframes`
   }
 `;
 
-const AboutMeContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-content: center;
- 
-  justify-content: flex-start;
-  width: 100%;
-  height: 85vh;
-  padding: 2%;
-  overflow: hidden;
-  /*border: 2px solid #dc2b14;*/
 
-  @media screen and (max-width: 1400px) {
-
-    padding-left: 50%;
-  
-    height: 91vh;
-  }
-  @media screen and (max-width: 700px) {
-   margin-top: 20%;
-    padding: 0;
-  }
-`;
 
 const TextPhotoContainer = styled.div`
   background-color: inherit;
   display: flex;
   align-items: center;
   transform: translateZ(10px);
- /* border: 2px solid #143cdc;*/
-  margin-top: 2%;
+/*  border: 2px solid #14dc5a;*/
   margin-left: 0;
+  padding-bottom: 47%;
   width: 50%;
-  height: 50vh;
+  height: auto;
   overflow: hidden;
-  @media screen and (max-width: 1400px) {
+  /*  border: 2px solid #009dff;*/
+  @media screen and (max-width: 1300px) {
     align-content: center;
     justify-content: center;
-margin-top: 50px;
-    width: 100%; 
-    z-index: 999;
+    margin-top: 5%;
+    width: 50%;
+    margin-right: 0;
   }
   @media screen and (max-width: 700px) {
-margin: 0 auto;
-    width: 100vh;
+
+
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
   }
 `;
 
@@ -75,9 +58,10 @@ const TextContainer = styled.div`
   overflow-y: auto;
 display: flex;
   align-content: center;
+  padding-top: 10%;
   margin-left: 0;
  /* border: 2px solid #da1111;*/
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
     width: 100%;
     margin-right: 0;
   }
@@ -93,8 +77,7 @@ display: flex;
 const StyledListContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
-
+  margin-bottom: 10px;
   width: 100%;
  
 `;
@@ -138,7 +121,7 @@ const StyledLink = styled(Link)`
     transform: translateY(6px);
     box-shadow: none;
   }
-  @media screen and (max-width: 700px) and (max-width: 1400px) {
+  @media screen and (max-width: 700px) and (max-width: 1300px) {
     width: calc(100% - 20px); /* Расчетная ширина кнопки для экранов от 701px до 1400px */
     
   }
@@ -151,12 +134,12 @@ const StyledLink = styled(Link)`
 export const HomeImageFooter = styled.img`
   position: absolute;
   width: 50%;
-  height: 100vh;
+  height: auto;
   top: 0;
   right: 0;
   object-fit: cover;
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
   position: fixed;
     width: 50vw;
     height: 100vh;
@@ -173,13 +156,12 @@ export const HomeImageFooter = styled.img`
 
 const AboutMe = () => {
     return (
-        <AboutMeContainer>
+        <HomeContainer>
             <HomeHeader>
                 <InfinitySymbol />
             </HomeHeader>
             <HomeImageFooter src={imgFooter} alt="Photo" />
             <TextPhotoContainer>
-
                 <TextContainer>
                     <StyledListContainer>
                         <StyledList>
@@ -200,7 +182,7 @@ const AboutMe = () => {
                     </StyledListContainer>
                 </TextContainer>
             </TextPhotoContainer>
-        </AboutMeContainer>
+        </HomeContainer>
     );
 };
 

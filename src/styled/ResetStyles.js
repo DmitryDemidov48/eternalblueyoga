@@ -42,13 +42,13 @@ export const ResetStyles = createGlobalStyle`
     line-height: 1;
     background-color: #000000;
     font-family: 'Libre Baskerville', 'Public Sans', serif;
-/*    border: 2px solid #11ff00;*/
+    /*border: 2px solid #11ff00;*/
     overflow-x: hidden; /* Запретить горизонтальную прокрутку */
     overflow-y: auto;
     max-width: 1400px;
+    height: 100vh;
     margin: 0; /* Убираем внешние отступы у body */
     padding: 0; /* Обнуляем внутренние отступы, если они есть */
-
 
   }
 

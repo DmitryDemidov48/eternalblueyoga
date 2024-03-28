@@ -2,27 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import imgFooter from '../../img/aboutImg/12.JPG'
-import { HomeHeader } from "../../styled/HomeStyles";
-import {BackButtonAbout} from "./Education";
 
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-  height: 85vh; /* Максимальная высота контейнера */
-/*  border: 2px solid #0e11d3;*/
-  overflow: hidden;
-  background-color: white;
-  @media screen and (max-width: 1400px) {
-    z-index: -1;
-    height: 91vh;
-  }
-  @media screen and (max-width: 700px) {
-    height: 94vh;
-  }
-`;
+import {AboutImage, BackButtonAbout, Container} from "./Education";
+import {HomeHeader} from "../Home";
+
+
+
+
 
 const Title = styled.h2`
   display: flex;
@@ -37,7 +23,7 @@ const Title = styled.h2`
   margin-bottom: 20px; /* Отступ снизу */
   /*border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1400px) {
+  @media screen and (min-width: 700px) and (max-width: 1300px) {
   
   }
   @media screen and (max-width: 700px){
@@ -50,14 +36,16 @@ const ParagraphContainer = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 0;
+  padding-bottom: 53%;
  /* border: 2px solid #0e11d3;*/
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
     margin-left: 50%;
     text-align: center;
   }
   @media screen and (max-width: 700px) {
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
     top: 10%;
   }
 `;
@@ -74,11 +62,11 @@ const ParagraphTitle = styled.span`
     margin-left: 0;
   }
 
-  @media screen and (min-width: 700px) and (max-width: 1400px) {
+  @media screen and (min-width: 700px) and (max-width: 1300px) {
     margin-left: 0;
   }
 
-  @media screen and (min-width: 1401px) {
+  @media screen and (min-width: 1300px) {
     margin-left: 0;
   }
 `;
@@ -99,7 +87,7 @@ const Paragraph = styled.p`
   width: auto; /* Установка ширины на автоматический размер */
 /*  border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1400px) {
+  @media screen and (min-width: 700px) and (max-width: 1300px) {
     
   }
   @media screen and (max-width: 700px){
@@ -123,37 +111,16 @@ const BackButton = styled(Link)`
     color: white;
   }
 `;
-export const HomeImageFooter = styled.img`
 
-  position: absolute;
-  width: 50%;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  object-fit: cover;
-  @media screen and (max-width: 1400px) {
-    position: fixed;
-    width: 50vw;
-    height: 100%;
-    top: 0;
-    left: -50%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  @media screen and (max-width: 700px) {
-    display: none;
-  }
-`;
 
 const SeminarsAndWorkshops = () => {
     return (
         <>
             <HomeHeader>
-
                 <BackButton to="/about">Назад</BackButton>
             </HomeHeader>
             <Container>
-                <HomeImageFooter src={imgFooter} alt="Photo" />
+                <AboutImage src={imgFooter} alt="Photo" />
                 <ParagraphContainer>
                 <Title>Мои Учебные Студии</Title>
                     <ParagraphTitle><strong> Московская школа йоги</strong></ParagraphTitle>

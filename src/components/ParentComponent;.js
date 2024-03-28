@@ -1,7 +1,5 @@
-
 import React from 'react';
 import TimeTable from '../pages/TimeTable';
-
 
  const localEvents = [
     { place: "Мосйога", time: "19:00 – 20:30", date: "Понедельник" },
@@ -9,8 +7,6 @@ import TimeTable from '../pages/TimeTable';
     { place: "Мосйога", time: "19:00 – 20:30", date: "Среда" },
      { place: "Ресурс", time: "20:15 – 21:45", date: "Четверг" },
     { place: "Мосйога", time: "19:00 – 20:30", date: "Пятница" },
-
-
 ];
 const ParentComponent = () => {
     const events = localEvents;

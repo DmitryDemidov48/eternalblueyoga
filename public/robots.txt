@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /public/
+Sitemap: https://www.eternalblueyoga.ru/sitemap.xml
+Crawl-delay: 10
