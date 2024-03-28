@@ -1,8 +1,12 @@
-version: "3.8"
+version: "3.3"
 
 networks:
   site-net:
     driver: bridge
+
+volumes:
+  certbot-conf:
+  certbot-www:
 
 services:
   nginx:
@@ -12,8 +16,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - certbot-conf:/etc/letsencrypt
+      - certbot-www:/var/www/certbot
     networks:
       - site-net
     ports:
@@ -21,7 +25,7 @@ services:
       - '443:443'
 
   site:
-    image: objdefault/eternal:v1.10.18
+    image: objdefault/eternal:v1.10.20
     container_name: site
     restart: unless-stopped
     expose:
@@ -32,7 +36,10 @@ services:
   certbot:
     image: certbot/certbot
     restart: unless-stopped
+    container_name: certbot
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - certbot-conf:/etc/letsencrypt
+      - certbot-www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    networks:
+      - site-net
