@@ -7,30 +7,57 @@ import { styled } from "styled-components";
 import {HomeContainer} from "./Home";
 
 export const ContainerSeminars = styled.div`
-/*border: 2px solid red;*/
+ /* border: 2px solid #0080ff;*/
+  width: 50%;
+  margin-left: 0;
   padding-bottom: 30%;
+  overflow: hidden;
+  @media screen and (max-width: 1300px) {
+    margin-right: 0;
+    width: 50%;
+    height: auto;
+    margin-top: -5%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+   
+
+
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: 5% 0 7% 0;
+    height: auto;
+    overflow-y: auto;
+
+  }
+\`   ;
 `;
 export const PosterContainer = styled.div`
   display: block;
   grid-template-columns: 1fr; /* Одна равномерная колонка */
-  margin-left: 7%;
+  margin-left: 10%;
   background-color: white;
-  width: 35%;
+  width: 80%;
   height: auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   /*border: 2px solid #dc1414;*/
   overflow: hidden;
   transition: max-height 1s ease;
-  border-radius: 2px;
+  border-radius: 5px;
   
   &:hover {
     max-height: none; /* Убираем ограничение высоты при наведении */
   }
   @media screen and (max-width: 1300px) {
+    
+  
+    
     margin-right: 0;
-    width: 48%;
+    width: 100%;
     height: auto;
-    margin-top: -5%;
+    margin-top: 10%;
+   
     
  
   }
@@ -48,7 +75,7 @@ export const Poster = styled.div`
   display: flex;
   align-items: center; /* Выравнивание контейнеров по верхнему краю */
   justify-content: center; /* Выравнивание контейнеров слева */
- /* border: 2px solid red;*/
+/*  border: 2px solid red;*/
   overflow: hidden;
   background-color: #fff;
   @media screen and (max-width: 1300px) {
@@ -68,15 +95,15 @@ export const Poster = styled.div`
 export const PosterImage = styled.img`
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  
   margin-bottom: 10px;
  /* border: 2px solid #dc1414;*/
   object-fit: cover;
   @media screen and (max-width: 1300px) {
    
     width: 100%;
-
-    margin-top: -5%;
+margin-right: 0;
+    
   }
   @media screen and (max-width: 700px) {
     width: 100vw;
@@ -121,7 +148,7 @@ export const PosterDescription = styled.p`
 
 
 export const SemImage = styled.img`
-  position: absolute;
+  position: fixed;
   width: 50vw; /* Ширина изображения равна ширине видимой области браузера */
   height: 100vh; /* Высота изображения равна высоте видимой области браузера */
   top: 0;
@@ -141,7 +168,7 @@ export const SemImage1 = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: 0;
+  top: -10%;
   right: 0;
   object-fit: cover;
 
@@ -149,10 +176,7 @@ export const SemImage1 = styled.img`
   @media screen and (max-width: 1300px) {
     display: none;
   }
-
- 
 `;
-
 const EventCalendar = () => {
     const eventsData = [
 

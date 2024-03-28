@@ -22,7 +22,7 @@ const SecondarySidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <>
             <SidebarTitleContainer>
-                <SidebarTitle> </SidebarTitle>
+
             </SidebarTitleContainer>
             {windowWidth <1300 &&  windowWidth >700&& (
                 <SidebarContainer isOpen={!isOpen}>

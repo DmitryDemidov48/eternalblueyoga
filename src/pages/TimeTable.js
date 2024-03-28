@@ -96,7 +96,7 @@ export const TableImage = styled.img`
 `;
 export const TableImage1 = styled.img`
   display: none; /* Изначально скрываем изображение */
-  position: absolute;
+  position: fixed;
   width: 50vw;
   height: 100vh;
   top: 0;

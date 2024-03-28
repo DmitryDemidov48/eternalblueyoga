@@ -220,7 +220,7 @@ export const HomeImage = styled.img`
   }
 `;
 export const HomeImage1 = styled.img`
-  position: absolute;
+  position: fixed;
   width: 50%;
   height: 100vh;
   top: 0;

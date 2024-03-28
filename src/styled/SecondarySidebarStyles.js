@@ -21,27 +21,14 @@ export const SidebarTitleContainer = styled.div `
   
 ` ;
 
-export const SidebarTitle = styled.div `
-  padding: 25px;
-  display: flex;
-  justify-content: start;
 
-  font-size: 24px;
-  margin-left: 20px; /* Устанавливаем правый отступ */
-  
-  @media screen and (max-width: 1025px) {
-    width: calc(100% - 40px); /* Устанавливаем ширину контейнера на всю доступную ширину с отступами */
-  }
-
-`
 export const SidebarContainer = styled.div`
-  width: ${props => (props.isOpen ? "200px" : "50px")};
+  width: ${props => (props.isOpen ? "200px" : "60px")};
   height: auto;
-  
   position: fixed;
-  top: 80px;
+  top: 30px;
   margin-left: 0;
-  padding: 10px;
+  padding: 15px;
   background: inherit;
   overflow-x: hidden;
   transition: width 1.2s;
@@ -57,7 +44,9 @@ export const SidebarContent = styled.nav`
   text-decoration: none;
   font-size: 18px;
   width: 100%;
- 
+
+
+
   
 `;
 
@@ -91,6 +80,7 @@ export const SidebarIcon = styled.span`
   font-size: ${props => (props.isHovered ? "32px" : "24px")};
   transition: font-size 0.3s;
   margin-left: 10px;
+  padding-right: 5px;
 
 `;
 

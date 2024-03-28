@@ -37,16 +37,17 @@ const ParagraphContainer = styled.div`
   height: 100%;
   margin-left: 0;
   padding-bottom: 53%;
- /* border: 2px solid #0e11d3;*/
+  /*border: 2px solid #0e11d3;*/
   @media screen and (max-width: 1300px) {
     margin-left: 50%;
     text-align: center;
   }
   @media screen and (max-width: 700px) {
+    
     width: 100%;
-    margin: 0 auto;
+ margin-left: 0;
     height: 100vh;
-    top: 10%;
+  margin-top: 20%;
   }
 `;
 
