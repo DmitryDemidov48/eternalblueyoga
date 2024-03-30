@@ -24,7 +24,7 @@ const SecondarySidebar = ({ isOpen, toggleSidebar }) => {
             <SidebarTitleContainer>
 
             </SidebarTitleContainer>
-            {windowWidth <1300 &&  windowWidth >700&& (
+            {windowWidth <1251 &&  windowWidth >700&& (
                 <SidebarContainer isOpen={!isOpen}>
                     <SidebarContent>
                         {MenuData.map(({ title, path, icon }) => (

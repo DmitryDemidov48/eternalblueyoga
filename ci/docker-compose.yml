@@ -25,7 +25,7 @@ services:
       - '443:443'
 
   site:
-    image: objdefault/eternal:v1.10.21
+    image: objdefault/eternal:v1.10.22
     container_name: site
     restart: unless-stopped
     expose:

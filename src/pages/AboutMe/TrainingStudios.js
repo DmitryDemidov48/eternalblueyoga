@@ -23,7 +23,7 @@ const Title = styled.h2`
   margin-bottom: 20px; /* Отступ снизу */
   /*border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
   
   }
   @media screen and (max-width: 700px){
@@ -36,11 +36,12 @@ const ParagraphContainer = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 0;
-  padding-bottom: 53%;
+  padding-bottom: 22.8%;
   /*border: 2px solid #0e11d3;*/
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     margin-left: 50%;
     text-align: center;
+    padding-bottom: 50%;
   }
   @media screen and (max-width: 700px) {
     
@@ -63,7 +64,7 @@ const ParagraphTitle = styled.span`
     margin-left: 0;
   }
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
     margin-left: 0;
   }
 
@@ -88,7 +89,7 @@ const Paragraph = styled.p`
   width: auto; /* Установка ширины на автоматический размер */
 /*  border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
     
   }
   @media screen and (max-width: 700px){

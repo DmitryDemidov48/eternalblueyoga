@@ -1,26 +1,24 @@
 import React from 'react';
-import imgR from '../img/semRight.JPG';
+
 import seminar from '../img/seminar.jpg';
-import imgL from '../img/semleft.png';
+
 import HeaderFooter from "../components/Menu/HeaderFooter";
 import { styled } from "styled-components";
 import {HomeContainer} from "./Home";
 
 export const ContainerSeminars = styled.div`
- /* border: 2px solid #0080ff;*/
-  width: 50%;
-  margin-left: 0;
-  padding-bottom: 30%;
+  
+  width: 100%;
   overflow: hidden;
-  @media screen and (max-width: 1300px) {
-    margin-right: 0;
-    width: 50%;
+/*  border: 2px solid red;*/
+  
+  @media screen and (max-width: 1250px) {
+    width: 60%;
     height: auto;
-    margin-top: -5%;
+   margin: 3% 10% 0 -5%;
     display: flex;
     align-content: center;
     justify-content: center;
-   
 
 
   }
@@ -31,54 +29,46 @@ export const ContainerSeminars = styled.div`
     overflow-y: auto;
 
   }
-\`   ;
+
 `;
 export const PosterContainer = styled.div`
-  display: block;
+  display: grid;
   grid-template-columns: 1fr; /* Одна равномерная колонка */
-  margin-left: 10%;
+  margin-right: 0;
   background-color: white;
-  width: 80%;
+  width: 50%;
   height: auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  /*border: 2px solid #dc1414;*/
+  /*border: 2px solid #1482dc;*/
   overflow: hidden;
   transition: max-height 1s ease;
-  border-radius: 5px;
-  
-  &:hover {
-    max-height: none; /* Убираем ограничение высоты при наведении */
-  }
-  @media screen and (max-width: 1300px) {
-    
-  
-    
-    margin-right: 0;
+  padding-bottom: 3%;
+  padding-top: 1%;
+  padding-left: 1%;
+
+  @media screen and (max-width: 1250px) {
+
     width: 100%;
-    height: auto;
-    margin-top: 10%;
-   
-    
- 
+
+
   }
   @media screen and (max-width: 700px) {
     width: 100%;
     margin: 5% 0 7% 0;
     height: auto;
     overflow-y: auto;
-   
-  }
+
+  
 `;
 export const Poster = styled.div`
- width: 30%;
-  padding: 3px;
   display: flex;
-  align-items: center; /* Выравнивание контейнеров по верхнему краю */
-  justify-content: center; /* Выравнивание контейнеров слева */
+  align-content: start;
+ width: 100%;
+  padding: 3px;
 /*  border: 2px solid red;*/
   overflow: hidden;
   background-color: #fff;
-  @media screen and (max-width: 1300px) {
+ /* @media screen and (max-width: 1300px) {
 
     width: 50%;
 
@@ -89,61 +79,62 @@ export const Poster = styled.div`
 
     margin-right: 0;
     margin-left: 0;
-  }
+  }*/
 `;
 
 export const PosterImage = styled.img`
-  width: 100%;
+  width: 50%;
+  border-radius: 5px;
   height: auto;
-  
-  margin-bottom: 10px;
  /* border: 2px solid #dc1414;*/
   object-fit: cover;
-  @media screen and (max-width: 1300px) {
-   
-    width: 100%;
-margin-right: 0;
-    
-  }
-  @media screen and (max-width: 700px) {
-    width: 100vw;
-    
-    margin-right: 0;
-    margin-left: 0;
-  }
-  
+ 
 `;
 
 export const PosterTitle = styled.h2`
   color: #673ab7;
   font-size: 20px;
-  
- /* border: 2px solid #dc1414;*/
+/*  border: 2px solid #dc1414;*/
   font-family: Georgia, serif;
   font-weight: 500;
+  margin-top: 0;
+  padding:5%;
+  text-align: center;
+  
+ 
 `;
 
 export const PosterDate = styled.p`
   font-family: Georgia, serif;
   font-weight: 600;
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
 
-  /*border: 2px solid #dc1414;*/
+ /* border: 2px solid #dc1414;*/
 `;
 
 export const PosterDescription = styled.p`
   background-color: #fff;
   color: #0c0c0c;
-  font-size: 16px;
+  font-size: 17px;
   overflow: hidden;
- /* border: 2px solid #dc1414;*/
+/*  border: 2px solid #dc1414;*/
   font-family: Georgia, serif;
   font-weight: 400;
   height: auto;
- 
-  padding: 10px;
-  margin-top: 1%;
+  padding-right: 2%;
+  padding-left: 2%;
+
+  @media screen and (max-width: 1250px) {
+
+   font-size: 15.8px;
+
+
+  }
+  @media screen and (max-width: 700px) {
+  font-size: 15px;
+
+
 `;
 
 
@@ -156,7 +147,7 @@ export const SemImage = styled.img`
   display: none;
   object-fit: cover; /* Масштабирование изображения так, чтобы оно полностью покрывало контейнер */
   z-index: -1;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: block; /* Показываем изображение при разрешении экрана меньше 1400px */
 
   }
@@ -166,21 +157,23 @@ export const SemImage = styled.img`
 `;
 export const SemImage1 = styled.img`
   position: absolute;
-  width: 50%;
+  width: 60vh;
   height: auto;
   top: -10%;
   right: 0;
   object-fit: cover;
 
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: none;
   }
 `;
 const EventCalendar = () => {
     const eventsData = [
 
-        { title: 'Семинар ', date: '2024', image:`${seminar}`, description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где вы сможете погрузиться в атмосферу гармонии и внутреннего спокойствия. Получите знания и навыки от опытных инструкторов, научитесь новым асанам и методам медитации, и обретите внутреннюю силу и уверенность.' },
+        { title: 'Семинар ', date: '2024', image:`${seminar}`, description: 'Присоединяйтесь к нашему увлекательному семинару о йоге, где каждый момент наполнен гармонией и спокойствием. В этом путешествии мы вместе углубимся в изысканное искусство йоги, открывая для себя новые горизонты практики и самопознания.\n' +
+                '\n' +
+                'Наши опытные инструкторы, с мудростью и любовью к йоге, будут рядом с вами на каждом шагу этого увлекательного пути. Они поделятся своими знаниями и опытом, помогая вам понять тонкости асан и глубоких методов медитации.' },
 
 
     ];
@@ -189,17 +182,20 @@ const EventCalendar = () => {
 <>
    <HeaderFooter/>
      <HomeContainer>
-         <SemImage1 src={imgR} alt="My Photo"/>
-         <SemImage src={imgL} alt="My Photo"/>
+         {/*<SemImage1 src={imgR} alt="My Photo"/>
+         <SemImage src={imgL} alt="My Photo"/>*/}
          <ContainerSeminars>
             {eventsData.map((event, index) => (
                 <PosterContainer key={index}>
-                    <PosterImage src={event.image} alt={event.title} />
                     <Poster>
-                    <PosterTitle>{event.title}</PosterTitle>
-                    <PosterDate>{event.date}</PosterDate>
+                        <PosterImage src={event.image} alt={event.title} />
+                        <PosterDescription>
+                            <PosterTitle>{event.title}{event.date}</PosterTitle>
+                            {event.description}</PosterDescription>
                     </Poster>
-                    <PosterDescription>{event.description}</PosterDescription>
+                    <PosterDescription>В нашем уютном пространстве вы обретете внутреннюю силу и уверенность, научитесь слушать свое тело и ум, и обретете гармонию с окружающим миром. Здесь вы найдете поддержку и вдохновение для своего личного роста и развития.
+
+                        Присоединяйтесь к нам и станьте частью нашего сообщества, где каждый человек уникален и ценен. Давайте вместе создадим пространство, наполненное светом, любовью и взаимопониманием. Добро пожаловать в мир йоги, где каждый день - новое открытие и новое возможность погрузиться в глубины своего собственного бытия.</PosterDescription>
                 </PosterContainer>
             ))}
                 </ContainerSeminars>

@@ -23,7 +23,7 @@ const Title = styled.h2`
   margin-bottom: 20px; /* Отступ снизу */
  /* border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
     
   }
   @media screen and (max-width: 700px) {
@@ -37,11 +37,13 @@ const ParagraphContainerTitle = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 0;
-  padding-bottom: 48%;
+  padding-bottom: 17.55%;
 /*  border: 2px solid #0e11d3;*/
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     margin-left: 50%;
     text-align: center;
+    padding-bottom: 30%;
+  ]
   }
   @media screen and (max-width: 700px) {
     width: 100%;
@@ -58,19 +60,18 @@ const ParagraphContainerTitle = styled.div`
 
 const Paragraph = styled.p`
   padding: 15px;
-  font-family: Georgia, serif;
+  font-family: "Roboto Light", serif;
   font-weight: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e0e0e;
-  font-size: 16px; /* Уменьшение размера шрифта */
-  line-height: 1.2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #0c0c0c;
+  font-size: 15.9px;
+  line-height: 1.48;
   margin-top: 0;
-  width: auto; /* Установка ширины на автоматический размер */
 /*  border: 2px solid red;*/
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
     text-align: start;
   }
   @media screen and (max-width: 700px){

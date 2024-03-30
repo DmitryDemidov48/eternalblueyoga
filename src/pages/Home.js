@@ -2,6 +2,7 @@ import React from 'react';
 import img from '../img/about.jpg';
 import imgL from '../img/LAbout.jpg';
 import imgFooter from '../img/aboutImg/HAbout.jpg'
+import sea from '../video/sea.mp4'
 import HeaderFooter, {Icon} from "../components/Menu/HeaderFooter";
 import {FaInstagram, FaTelegramPlane} from "react-icons/fa";
 import {FaWhatsapp} from "react-icons/fa6";
@@ -16,15 +17,16 @@ export const HomeContainer = styled.div`
   justify-content: flex-start;
   width: 100%;
   height: auto; /* Максимальная высота контейнера */
-  padding: 2%; /* Отступ внутри контейнера */
   overflow: hidden;
- /* border: 1px solid #0719da;*/
-  @media screen and (max-width: 1300px) {
-    height: 100vh;
+  /* border: 1px solid #0719da;*/
+  border-top: 2px solid #020202;
+  @media screen and (max-width: 1250px) {
+    border-top: none;
+    height: auto;
     display: flex; /* Используем flexbox */
     align-items: center; /* Выравниваем контент по вертикали */
     justify-content: flex-end; /* Выравниваем контент по правому краю */
-    overflow: auto;
+    overflow-y: auto;
   }
   @media screen and (max-width: 700px) {
 
@@ -37,7 +39,7 @@ export const HomeContainer = styled.div`
 
 
 export const HomeIcon = styled.div`
-  /*border: 2px solid red;*/
+ /* border: 2px solid red;*/
   position: relative;
   font-size: 25px;
   color: white;
@@ -69,7 +71,7 @@ export const HomeIcons = styled.div`
   > *:hover {
     transform: scale(1.2); /* Увеличиваем размер при наведении */
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: none;
   }
   @media screen and (max-width: 700px) {
@@ -86,7 +88,7 @@ export const HomeHeader = styled.header`
   background-color: #090909;
   position: relative;
   z-index: 1;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: flex;
     position: fixed;
 
@@ -128,16 +130,22 @@ export const HomePosterContainer = styled.div`
   background-color: inherit;
   width: 50%;
   height: auto;
-  margin-left: -1%;
+  padding-top: 3%;
+  margin-left: 0;
   display: flex;
   overflow: hidden;
   flex-direction: column; /* Расположение элементов в столбце */
   gap: 20px;
-  
-  padding-bottom: 10%;
-  @media screen and (max-width: 1300px) {
-    margin: 5% -2% 0 7%;
+ 
+  @media screen and (max-width: 1250px) and (min-width: 700px) {
+   padding-left: 10px;
+    margin: 2% 0 0 7%;
     width: 50%;
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 10%;
+    
+    
 
   }
   @media screen and (max-width: 700px) {
@@ -151,7 +159,7 @@ export const HomePosterTitle = styled.h1`
   font-family: Georgia, serif;
   background: white;
   color: #070707;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 20px; /* Используйте фиксированный размер шрифта в пикселях */
   line-height: 25px; /* Укажите фиксированную высоту строки в пикселях */
   letter-spacing: 2px;
@@ -162,13 +170,13 @@ export const HomePosterTitle = styled.h1`
   border-radius: 5px;
   width: 50%;
   height: auto;
-  margin-right: 0;
- /* border: 2px solid red;*/
-  @media screen and (max-width: 1300px) and (min-width: 700px) {
+  margin-left: 0;
+/*  border: 2px solid red;*/
+  @media screen and (max-width: 1250px) and (min-width: 700px) {
     font-size: 1.5vw; /* Размер шрифта для экранов от 700px до 1399px */
     line-height: 1.5vw; /* Высота строки для экранов от 700px до 1399px */
     margin-left: 0;
-    margin-top: 10%;
+    margin-top: 20%;
   }
   @media screen and (max-width: 700px) {
     font-size: 3.2vw; /* Размер шрифта для экранов до 699px */
@@ -183,18 +191,18 @@ export const HomePosterDescription = styled.p`
   font-family: Georgia, serif;
   background: white;
   color: #0c0c0c;
-  font-size: 20px; /* Используйте фиксированный размер шрифта в пикселях */
-  line-height: 22px; /* Укажите фиксированную высоту строки в пикселях */
+  font-size: 18px; /* Используйте фиксированный размер шрифта в пикселях */
+  line-height: 25px; /* Укажите фиксированную высоту строки в пикселях */
   text-align: left;
   font-weight: 400;
- /* border: 2px solid #dc1414;*/
+/*  border: 2px solid #dc1414;*/
   border-radius: 5px;
   margin-top: 5%;
   padding: 15px;
   width: 80%;
   height: auto;
 /*  border: 2px solid red;*/
-  @media screen and (max-width: 1300px) and (min-width: 700px) {
+  @media screen and (max-width: 1250px) and (min-width: 700px) {
     font-size: 1.5vw; /* Размер шрифта для экранов от 700px до 1399px */
     line-height: 1.8vw; /* Высота строки для экранов от 700px до 1399px */
   }
@@ -211,11 +219,10 @@ export const HomeImage = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: -40%;
+  top: -50%;
   right: 0;
   object-fit: cover;
-
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: none;
   }
 `;
@@ -228,7 +235,7 @@ export const HomeImage1 = styled.img`
   object-fit: cover;
   z-index: -1;
   display: none;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: block;
   }
   @media screen and (max-width: 700px) {
@@ -277,7 +284,7 @@ export const HomeButton = styled(Link)`
     background-color: #020202;
     color: white;
   }
-  @media screen and (max-width: 1300px) and (min-width: 700px) {
+  @media screen and (max-width: 1250px) and (min-width: 700px) {
     font-size: 2vw;
     
   
@@ -288,10 +295,28 @@ export const HomeButton = styled(Link)`
  
   }
 `;
+const HomeVideo = styled.video`
+   /* border: 2px solid red;*/
+  object-fit: cover;
+  width: 100%;
+  height: 100px;
+  margin-bottom:  0;
+  left: 0;
+  filter: blur(10px); /* Добавляет размытие краев */
+  @media screen and (max-width: 1250px) and (min-width: 700px) {
+   display: none;
+
+
+  }
+  @media screen and (max-width: 700px) {
+   display: none;
+
+  }
+`;
 const Home = () => {
     const eventsData = [
         { title: 'СОЗЕРЦАЙТЕ БЕСКОНЕЧНОЕ СИНЕЕ НЕБО ВНУТРИ СЕБЯ С ETERNAL BLUE YOGA. ',
-            description: 'Откройте новый путь к гармонии тела и ума с хатхой йогой.' +
+            description: 'Откройте новый путь к гармонии тела и ума с хатхa-йога.' +
                 ' Погрузитесь в мир упражнений, которые укрепляют тело,' +
                 ' уравновешивают дыхание и успокаивают ум.' +
                 ' Присоединяйтесь к нам и почувствуйте преображение каждой клеточки вашего существа. '
@@ -323,6 +348,10 @@ const Home = () => {
                             <Icon to="https://wa.me/89692809728">
                                 <FaWhatsapp />
                             </Icon></HomeIcons>
+                        <HomeVideo HomeVideo autoPlay loop muted playsInline controls={false}>
+                            <source src={sea} type="video/mp4" />
+                            Ваш браузер не поддерживает видео.
+                        </HomeVideo>
                     </HomePosterContainer>
                 ))}
 

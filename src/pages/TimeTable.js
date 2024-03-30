@@ -6,13 +6,13 @@ import { styled } from "styled-components";
 import {HomeContainer} from "./Home";
 
 export const ContainerTable = styled.div `
-  /*border: 2px solid #cb1c1c;*/ 
-  margin-left: -2%;
+  /*border: 2px solid #cb1c1c; */
+  margin-left: 0;
   width: 50%;
   overflow: hidden;
   height: auto;
-  padding-bottom: 30%;
-  @media screen and (max-width: 1300px) {
+  padding-bottom: 17%;
+  @media screen and (max-width: 1250px) {
     height: auto;
     margin-right: -1%;
     margin-top: 0;
@@ -27,11 +27,12 @@ export const ContainerTable = styled.div `
   }
 `
 export const Table = styled.table`
-  width: 100%;
- /* border: 2px solid #cb1c1c;*/
+  width: 90%;
+  /*border: 2px solid #cb1c1c;*/
+  margin-top: 10%;
   overflow: hidden;
   height: 50%;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
   
     height: auto;
   right: 0;
@@ -75,22 +76,22 @@ export const TableCell = styled.td`
   &:nth-child(3) {
     width: 6.25rem; /* Используем rem */
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     font-size: 18px;
   }
   @media screen and (max-width: 700px) {
-    font-size: 15px;
+    font-size: 20px;
   }
 `;
 export const TableImage = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: -30%;
+  top: -55%;
   right: 0;
   object-fit: cover;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: none;
   }
 `;
@@ -103,7 +104,7 @@ export const TableImage1 = styled.img`
   left: 0;
   object-fit: cover;
   z-index: -1;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: block; /* Показываем изображение при разрешении экрана меньше 1400px */
   }
   @media screen and (max-width: 700px) {

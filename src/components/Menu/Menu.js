@@ -9,7 +9,7 @@ const Menu = () => {
     const windowWidth = useWindowWidth();
 
     const checkScreenSize = useCallback(() => {
-        setIsTablet(windowWidth <= 1300);
+        setIsTablet(windowWidth <= 1250);
     }, [windowWidth]);
 
     useEffect(() => {

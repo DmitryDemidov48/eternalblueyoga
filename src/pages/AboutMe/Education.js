@@ -8,17 +8,16 @@ import {HomeHeader} from "../Home";
 
 
 export const Container = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
   height: auto; /* Максимальная высота контейнера */
-
   overflow: hidden;
   background-color: white;
- /* border: 1px solid #da07be;*/
-  @media screen and (max-width: 1300px) {
+  border-top: 2px solid #070707;
+  @media screen and (max-width: 1250px) {
     height: auto;
     width: 100%;
     margin-right: 0;
@@ -27,6 +26,7 @@ export const Container = styled.div`
     justify-content: flex-end; /* Выравниваем контент по правому краю */
     overflow-y: auto;
     z-index: -1;
+    background-color: white;
   }
   @media screen and (max-width: 700px) {
     position: absolute;
@@ -40,14 +40,15 @@ export const Container = styled.div`
 `;
 
 const EducationContainerItem = styled.div `
+
   position: relative;
   width: 50%;
   height: 100%;
   margin-left: 0;
-padding-bottom: 37%;
+padding-bottom: 6.42%;
 
 /*  border: 2px solid #0ed318;*/
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     margin-left: 50%;
     text-align: center;
    
@@ -79,7 +80,7 @@ const EducationTitle = styled.h2`
   margin-bottom: 5px; /* Отступ снизу */
 /*  border: 2px solid red;*/
   
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
 
   }
 `;
@@ -87,24 +88,24 @@ const EducationTitle = styled.h2`
 
 const EducationText = styled.p`
   padding: 15px;
-  font-family: Georgia, serif;
+  font-family: "Roboto Light", serif;
   font-weight: 200;
   position: relative;
   width: 100%;
   height: auto;
   color: #0c0c0c;
   font-size: 15px;
-  line-height: 1.2;
+  line-height: 1.32;
   margin-top: 0;
 /*  border: 2px solid #002aff;*/
   background-color: white;
  
 
-  @media screen and (min-width: 700px) and (max-width: 1300px) {
+  @media screen and (min-width: 700px) and (max-width: 1250px) {
     font-size: 16px;
-    text-align: center;
+    text-align: start;
     margin-top: 0;
-    padding-bottom: 20%;
+    padding-bottom: 19%;
     overflow-y: auto;
     width: 100%;
     height: auto;
@@ -136,7 +137,7 @@ export const BackButtonAbout = styled(Link)`
 
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     display: none;
   }
 `;
@@ -161,10 +162,10 @@ export const AboutImage = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: 0;
+  top: -25%;
   right: 0;
   object-fit: cover;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     position: fixed;
     width: 50vw;
     height: 100%;

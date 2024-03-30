@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   width: 100%; /* Занимает всю доступную ширину */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100px;
   background: inherit;
   overflow: hidden; /* Предотвращает выход за границы */
@@ -26,7 +26,8 @@ const HeaderMenu = styled.div `
   margin-right: 0;
   height: 100%;
   background: white;
- /* border: 2px solid red;*/
+  /*border: 2px solid red;*/
+  margin-left: 0;
  
 `;
 const Title = styled.h1`
@@ -98,7 +99,6 @@ const MainHeader = () => {
 
     return (
         <HeaderWrapper>
-            <Title> Eternal Blue Yoga<InfinityAnimation/></Title>
         <HeaderMenu>
             <Nav >
                 {MenuData.map(({ title, path, icon }) => (
@@ -109,6 +109,7 @@ const MainHeader = () => {
                 ))}
             </Nav>
         </HeaderMenu>
+            <Title> Eternal Blue Yoga<InfinityAnimation/></Title>
         </HeaderWrapper>
     );
 };

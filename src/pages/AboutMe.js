@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-
+import star from '../video/star.mp4'
 import { Link } from "react-router-dom";
 
 import InfinitySymbol from "../animation/eternal";
 import imgFooter from '../img/aboutImg/12.JPG'
 import {HomeContainer, HomeHeader} from "./Home";
+import sea from "../video/sea.mp4";
 
 
 const fadeInText = keyframes`
@@ -24,16 +25,16 @@ const fadeInText = keyframes`
 const TextPhotoContainer = styled.div`
   background-color: inherit;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: center;
   transform: translateZ(10px);
-/*  border: 2px solid #14dc5a;*/
   margin-left: 0;
-  padding-bottom: 47%;
   width: 50%;
   height: auto;
   overflow: hidden;
-  /*  border: 2px solid #009dff;*/
-  @media screen and (max-width: 1300px) {
+  padding-bottom: 16%;
+  /* border: 2px solid #009dff;*/
+  @media screen and (max-width: 1250px) {
     align-content: center;
     justify-content: center;
     margin-top: 5%;
@@ -58,10 +59,10 @@ const TextContainer = styled.div`
   overflow-y: auto;
 display: flex;
   align-content: center;
-  padding-top: 10%;
+  padding-top: 20%;
   margin-left: 0;
  /* border: 2px solid #da1111;*/
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
     width: 100%;
     margin-right: 0;
   }
@@ -77,7 +78,7 @@ display: flex;
 const StyledListContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  
   width: 100%;
  
 `;
@@ -121,8 +122,8 @@ const StyledLink = styled(Link)`
     transform: translateY(6px);
     box-shadow: none;
   }
-  @media screen and (max-width: 700px) and (max-width: 1300px) {
-    width: calc(100% - 20px); /* Расчетная ширина кнопки для экранов от 701px до 1400px */
+  @media screen and (max-width: 700px) and (max-width: 1250px) {
+    width: calc(100% - 20px); 
     
   }
   @media screen and (max-width: 700px) {
@@ -135,11 +136,10 @@ export const HomeImageFooter = styled.img`
   position: absolute;
   width: 50%;
   height: auto;
-  top: 0;
+  top: -25%;
   right: 0;
   object-fit: cover;
-
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1250px) {
   position: fixed;
     width: 50vw;
     height: 100vh;
@@ -153,7 +153,25 @@ export const HomeImageFooter = styled.img`
   }
 `;
 
+const AboutVideo = styled.video`
+  position: absolute;
+ /*   border: 2px solid red;*/
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+  margin-bottom:  0;
 
+  filter: blur(7px); /* Добавляет размытие краев */
+  z-index: -1;
+
+  @media screen and (max-width: 1250px) {
+    display: none;
+  }
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+  
+`;
 const AboutMe = () => {
     return (
         <HomeContainer>
@@ -179,9 +197,17 @@ const AboutMe = () => {
                                 <StyledLink to="/trainingStudios">Мои учебные студии</StyledLink>
                             </StyledListItem>
                         </StyledList>
+
                     </StyledListContainer>
+
                 </TextContainer>
+
             </TextPhotoContainer>
+            <AboutVideo HomeVideo autoPlay loop muted playsInline controls={false}>
+                <source src={star} type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+            </AboutVideo>
+
         </HomeContainer>
     );
 };
